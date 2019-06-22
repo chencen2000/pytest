@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<defect_record version="1.1">
+<index>1936</index>
+<model>Iphone6 plus Gold</model>
+<time>2019/06/20 11:44:54</time>
+<station name="BACK">
+<surface name="B">
+<sensor name="smooth_surface_sensor_2" type="smooth_surface_sensor">
+<parameter>
+<defect_item index="1">
+<enabled>1</enabled>
+<color>2</color>
+<threshold>25</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<max_length>1</max_length>
+<min_width>0.15</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.8</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+<defect_item index="2">
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1.01</min_length>
+<min_width>0</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1.5</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+</parameter>
+<region>1540,993,11165,6714</region>
+<defect>
+<item class="defect">
+<type>Scratch</type>
+<defect_item>2</defect_item>
+<length>1.07282</length>
+<width>0.0624853</width>
+<area_mm>0.0658181</area_mm>
+<area_pixel>339</area_pixel>
+<contrast>32</contrast>
+<location>
+<point>2137.96,1665.66</point>
+<point>2200.78,1710.17</point>
+<point>2211.17,1695.51</point>
+<point>2148.35,1651</point>
+</location>
+</item>
+<item class="defect">
+<type>Scratch</type>
+<defect_item>2</defect_item>
+<length>1.03536</length>
+<width>0.11309</width>
+<area_mm>0.116492</area_mm>
+<area_pixel>600</area_pixel>
+<contrast>61</contrast>
+<location>
+<point>8152.3,3665.46</point>
+<point>8157.29,3591.32</point>
+<point>8132.8,3589.68</point>
+<point>8127.82,3663.82</point>
+</location>
+</item>
+</defect>
+</sensor>
+<sensor name="measure_table_sensor_1" type="measure_table_sensor">
+<region>0,0,0,0</region>
+<defect>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Logo</region>
+<value>7.32162</value>
+</item>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Rear_Cam</region>
+<value>7.53715</value>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+<station name="DOWN">
+<surface name="B">
+<sensor name="measure_table_sensor_1" type="measure_table_sensor">
+<region>0,0,0,0</region>
+<defect>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Mic</region>
+<value>13.2751</value>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+<station name="UP">
+<surface name="B">
+<sensor name="edge_sensor_1" type="edge_sensor">
+<parameter>
+<defect_item index="1">
+<enabled>1</enabled>
+<threshold>18</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.6</min_length>
+<min_width>0.1</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+<defect_item index="2">
+<enabled>0</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0</min_width>
+<max_width>0.17</max_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+</parameter>
+<region>268,590,1748,692</region>
+<defect>
+<item class="defect">
+<type>Scratch</type>
+<defect_item>1</defect_item>
+<length>5.94614</length>
+<width>0.16978</width>
+<area_mm>1.12445</area_mm>
+<area_pixel>489</area_pixel>
+<contrast>30</contrast>
+<location>
+<point>1497.5,690.581</point>
+<point>1621.5,690.5</point>
+<point>1621.49,675.471</point>
+<point>1497.49,675.553</point>
+</location>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+<station name="RIGHT">
+<surface name="B">
+<sensor name="measure_table_sensor_1" type="measure_table_sensor">
+<region>0,0,0,0</region>
+<defect>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Switch</region>
+<value>27.7567</value>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+</defect_record>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<defect_record version="1.1">
+<index>9782</index>
+<model>Iphone6 plus Space Gray</model>
+<time>2019/06/20 11:56:35</time>
+<station name="BACK">
+<surface name="B">
+<sensor name="smooth_surface_sensor_2" type="smooth_surface_sensor">
+<parameter>
+<defect_item index="1">
+<enabled>1</enabled>
+<color>2</color>
+<threshold>25</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>0</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<max_length>1</max_length>
+<min_width>0.15</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+<defect_item index="2">
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>9</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1.01</min_length>
+<min_width>0</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1.5</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1.5</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</defect_item>
+</parameter>
+<region>1620,985,11174,6702</region>
+<defect>
+<item class="defect">
+<type>Nick</type>
+<defect_item>2</defect_item>
+<length>1.04551</length>
+<width>0.355471</width>
+<area_mm>0.239197</area_mm>
+<area_pixel>1232</area_pixel>
+<contrast>36</contrast>
+<location>
+<point>2376.46,1539.95</point>
+<point>2445.64,1510.89</point>
+<point>2425.7,1463.44</point>
+<point>2356.53,1492.5</point>
+</location>
+</item>
+</defect>
+</sensor>
+<sensor name="measure_table_sensor_1" type="measure_table_sensor">
+<region>0,0,0,0</region>
+<defect>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Rear_Cam</region>
+<value>25.4746</value>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+<station name="RIGHT">
+<surface name="B">
+<sensor name="measure_table_sensor_1" type="measure_table_sensor">
+<region>0,0,0,0</region>
+<defect>
+<item class="measurement">
+<type>Discoloration</type>
+<region>Switch</region>
+<value>22.4262</value>
+</item>
+</defect>
+</sensor>
+</surface>
+</station>
+</defect_record>

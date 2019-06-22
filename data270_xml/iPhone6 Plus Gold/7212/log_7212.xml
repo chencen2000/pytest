@@ -1,0 +1,3869 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<record>
+<time>2019/06/20 11:48:50</time>
+<pass>0</pass>
+<index>7212</index>
+<io_sort>3</io_sort>
+<classification>B</classification>
+<model_name>Iphone6 plus Gold</model_name>
+<work_station>
+<work_station_record>
+<pass>1</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="global_alignment_sensor" name="global_alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect_corner">
+<corner_enabled>1</corner_enabled>
+<corner_1>1057.46, 960.454</corner_1>
+<corner_2>1154.47, 1319.41</corner_2>
+<corner_3>1076.86, 1038.07</corner_3>
+<corner_4>1057.46, 1377.62</corner_4>
+<origin_enabled>0</origin_enabled>
+<origin>100,100</origin>
+<center>6388.42, 3802.72</center>
+<width>11321</width>
+<height>5626</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>5</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>91</value>
+<text></text>
+<found>0</found>
+<offset_x>15.75</offset_x>
+<offset_y>4.74942</offset_y>
+<angle>-3.65521e-05</angle>
+<similarity>0.918716</similarity>
+</result>
+<level>5</level>
+<origin_enabled>0</origin_enabled>
+<origin>100,100</origin>
+<detail_align>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>1, 1</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>10, 10</max_offset>
+</detector>
+</detail_align>
+</sensor>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_1">
+<group></group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="auto">
+<auto_region_mode>0</auto_region_mode>
+<create_mode>0</create_mode>
+<threshold_high>255</threshold_high>
+<threshold_low>130</threshold_low>
+<min_width>0</min_width>
+<min_height>0</min_height>
+<shrink>
+<mode>0</mode>
+<length>0.2</length>
+<left>0.6</left>
+<top>0.2</top>
+<right>0.3</right>
+<bottom>0.2</bottom>
+</shrink>
+<center>11499.9, 3885.24</center>
+<width>1205</width>
+<height>5491</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1215.49, 4753.45</center>
+<width>347</width>
+<height>345</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6116, 
+-3.65521e-05, 1, 3.98283
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>81.9442</value>
+<text></text>
+<found>1</found>
+<offset_x>5</offset_x>
+<offset_y>-1</offset_y>
+<angle>0</angle>
+<similarity>0.819442</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_3">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>1226.45, 5117.06</center>
+<width>360</width>
+<height>275</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6116, 
+-3.65521e-05, 1, 3.98283
+</transformation_matrix>
+</region>
+<region type="circle"><center>1220.89, 5135.83</center><radius>80.5226</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6116, 
+-3.65521e-05, 1, 3.98283
+</transformation_matrix>
+</region>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>190.444</value>
+<text></text>
+</result>
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="auto">
+<auto_region_mode>0</auto_region_mode>
+<create_mode>0</create_mode>
+<threshold_high>255</threshold_high>
+<threshold_low>100</threshold_low>
+<min_width>0</min_width>
+<min_height>0</min_height>
+<shrink>
+<mode>0</mode>
+<length>0</length>
+<left>0.2</left>
+<top>0.5</top>
+<right>0.3</right>
+<bottom>0.7</bottom>
+</shrink>
+<center>6376.27, 3847.86</center>
+<width>9619</width>
+<height>5712</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>9976.48, 3835.99</center>
+<width>396</width>
+<height>1726</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>9588.87, 3836.13</center>
+<width>267</width>
+<height>2432</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>9079.57, 3826.59</center>
+<width>404</width>
+<height>1087</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>3720.88, 3855.58</center>
+<width>1363</width>
+<height>1105</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>2</color>
+<threshold>25</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<max_length>1</max_length>
+<min_width>0.15</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.8</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1.01</min_length>
+<min_width>0</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1.5</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_3">
+<group></group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="auto">
+<auto_region_mode>0</auto_region_mode>
+<create_mode>0</create_mode>
+<threshold_high>255</threshold_high>
+<threshold_low>100</threshold_low>
+<min_width>0</min_width>
+<min_height>0</min_height>
+<shrink>
+<mode>1</mode>
+<length>0.2</length>
+<left>0</left>
+<top>0</top>
+<right>0</right>
+<bottom>0</bottom>
+</shrink>
+<center>1264.79, 6120.55</center>
+<width>839</width>
+<height>1024</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_4">
+<group></group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="auto">
+<auto_region_mode>0</auto_region_mode>
+<create_mode>0</create_mode>
+<threshold_high>255</threshold_high>
+<threshold_low>100</threshold_low>
+<min_width>0</min_width>
+<min_height>0</min_height>
+<shrink>
+<mode>1</mode>
+<length>0.2</length>
+<left>0</left>
+<top>0</top>
+<right>0</right>
+<bottom>0</bottom>
+</shrink>
+<center>1207.58, 3347.88</center>
+<width>828</width>
+<height>4741</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="circle"><center>1224.9, 5128.44</center><radius>109.866</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="circle"><center>1220.67, 4777.8</center><radius>187.131</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>2</color>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1242.05, 5628.62</center>
+<width>669</width>
+<height>610</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6115, 
+-3.65521e-05, 1, 1.98283
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>85.5584</value>
+<text></text>
+<found>1</found>
+<offset_x>5</offset_x>
+<offset_y>-3</offset_y>
+<angle>0</angle>
+<similarity>0.855584</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="circle"><center>1255.47, 5639.36</center><radius>208</radius><is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6115, 
+-3.65521e-05, 1, 1.98283
+</transformation_matrix>
+</region>
+<region type="circle"><center>1249.27, 5635.57</center><radius>160.297</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 20.6115, 
+-3.65521e-05, 1, 1.98283
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>25</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="circle"><center>3722.42, 3837.29</center><radius>752.811</radius><is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="polygon"><vertex>4284.41, 3822.04</vertex><vertex>4284.41, 3888.56</vertex><vertex>4347.13, 3974.26</vertex><vertex>4313.17, 4112.5</vertex><vertex>4201.26, 4221.18</vertex><vertex>3996.14, 4337.6</vertex><vertex>3730.04, 4376.41</vertex><vertex>3585.91, 4365.32</vertex><vertex>3475.03, 4309.88</vertex><vertex>3364.85, 4209.52</vertex><vertex>3296.94, 4025.19</vertex><vertex>3375.25, 3910.74</vertex><vertex>3224.18, 3872.39</vertex><vertex>3098.06, 3777.69</vertex><vertex>3037.08, 3650.18</vertex><vertex>3037.43, 3564.37</vertex><vertex>3236.65, 3578.12</vertex><vertex>3308.72, 3611.38</vertex><vertex>3358.62, 3472.79</vertex><vertex>3447.31, 3350.82</vertex><vertex>3552.65, 3339.74</vertex><vertex>3608.08, 3406.26</vertex><vertex>3746.67, 3433.98</vertex><vertex>3879.72, 3395.17</vertex><vertex>3929.62, 3345.28</vertex><vertex>3990.6, 3295.39</vertex><vertex>4179.08, 3356.37</vertex><vertex>4262.24, 3445.07</vertex><vertex>4334.31, 3572.57</vertex><vertex>4334.31, 3666.82</vertex><vertex>4306.59, 3777.69</vertex><is_mask>1</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>185.654</value>
+<text></text>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>1200.6, 3603.24</center>
+<width>329</width>
+<height>362</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>2017.54, 3610.94</center>
+<width>310</width>
+<height>329</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 3.65521e-05, 15.6116, 
+-3.65521e-05, 1, 4.98301
+</transformation_matrix>
+</region>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>184.517</value>
+<text></text>
+</result>
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="measure_table_sensor" name="measure_table_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="icon">
+<position>1920.24, 3124.4</position>
+<icon_name>measure_table_sensor</icon_name>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<result type="detect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<measure_table>
+<item>
+<caption>Logo</caption>
+<sensor_1>brightness_sensor_1</sensor_1>
+<sensor_2>brightness_sensor_2</sensor_2>
+<combine_method>2</combine_method>
+<check_value>1</check_value>
+<min_value>0</min_value>
+<max_value>5</max_value>
+<sort>4</sort>
+<area>Logo</area>
+<pass>1</pass>
+<value>1.13691</value>
+</item>
+<item>
+<caption>Camera</caption>
+<sensor_1>brightness_sensor_2</sensor_1>
+<sensor_2>brightness_sensor_3</sensor_2>
+<combine_method>2</combine_method>
+<check_value>1</check_value>
+<min_value>0</min_value>
+<max_value>6</max_value>
+<sort>4</sort>
+<area>Rear_Cam</area>
+<pass>1</pass>
+<value>5.92708</value>
+</item>
+</measure_table>
+</sensor>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+<work_station_record>
+<pass>1</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>337.784, 642.525</center>
+<width>124</width>
+<height>145</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>1731.36, 636.873</center>
+<width>133</width>
+<height>141</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>1043.24, 638.306</center>
+<width>196</width>
+<height>74</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>95</value>
+<text></text>
+<found>0</found>
+<offset_x>1</offset_x>
+<offset_y>1</offset_y>
+<angle>-0.00790393</angle>
+<similarity>0.957065</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>452.332, 590.362</vertex><vertex>343.305, 604.472</vertex><vertex>318.35, 617.449</vertex><vertex>304.375, 647.394</vertex><vertex>322.343, 667.358</vertex><vertex>350.366, 679.87</vertex><vertex>401.274, 690.351</vertex><vertex>1039.13, 688.854</vertex><vertex>1613.37, 689.119</vertex><vertex>1700.18, 686.194</vertex><vertex>1738.99, 680.321</vertex><vertex>1757.49, 654.925</vertex><vertex>1757.78, 612.577</vertex><vertex>1721.97, 594.924</vertex><vertex>1629.09, 586.181</vertex><vertex>1033.28, 587.967</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>601.711, 642.108</center><radius>24.25</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>498.797, 643.143</center><radius>50.6069</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1403.82, 637.515</center><radius>21.786</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1448.85, 636.108</center><radius>21.701</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1496.2, 636.809</center><radius>21.5136</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1543.81, 636.847</center><radius>21.3493</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1592.52, 636.915</center><radius>21.9648</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1636.76, 636.948</center><radius>23.2467</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>905.935, 637.747</center><radius>22.8718</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1177.25, 638.095</center><radius>23.2425</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>1040.38, 637.084</center>
+<width>202</width>
+<height>73</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1355.12, 637.088</center><radius>21.859</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<region type="circle"><center>1308.67, 637.631</center><radius>22.022</radius><is_mask>1</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>560.466, 639.965</center>
+<width>21</width>
+<height>41</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>176.643</value>
+<text></text>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>779.199, 640.712</center>
+<width>43</width>
+<height>38</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999969, -0.00790384, 6.09088, 
+-0.00790384, -0.999969, 1289.18
+</transformation_matrix>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>174.059</value>
+<text></text>
+</result>
+</sensor>
+</node>
+</node>
+</node>
+<node>
+<sensor type="measure_table_sensor" name="measure_table_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="icon">
+<position>501.929, 733.585</position>
+<icon_name>measure_table_sensor</icon_name>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<result type="detect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<measure_table>
+<item>
+<caption>Mic</caption>
+<sensor_1>brightness_sensor_1</sensor_1>
+<sensor_2>brightness_sensor_2</sensor_2>
+<combine_method>2</combine_method>
+<check_value>1</check_value>
+<min_value>0</min_value>
+<max_value>7</max_value>
+<sort>4</sort>
+<area>Mic</area>
+<pass>1</pass>
+<value>2.58407</value>
+</item>
+</measure_table>
+</sensor>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+<work_station_record>
+<pass>1</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>299.759, 642.389</center>
+<width>137</width>
+<height>146</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999996, 0.0029112, -0.358225, 
+-0.0029112, 0.999996, 2.89644
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>1686.92, 636.438</center>
+<width>181</width>
+<height>155</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999996, 0.0029112, -0.358225, 
+-0.0029112, 0.999996, 2.89644
+</transformation_matrix>
+</region>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>98</value>
+<text></text>
+<found>0</found>
+<offset_x>1.5</offset_x>
+<offset_y>0</offset_y>
+<angle>-0.0029112</angle>
+<similarity>0.980631</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>347.39, 594.103</vertex><vertex>280.653, 611.215</vertex><vertex>262.403, 638.32</vertex><vertex>272.273, 671.021</vertex><vertex>310.468, 685.135</vertex><vertex>360.673, 688.435</vertex><vertex>477.038, 688.408</vertex><vertex>938.182, 689.176</vertex><vertex>1236.2, 688.871</vertex><vertex>1632.62, 689.493</vertex><vertex>1701.96, 687.957</vertex><vertex>1726.48, 674.283</vertex><vertex>1740.06, 644.269</vertex><vertex>1730.46, 611.567</vertex><vertex>1690.9, 595.276</vertex><vertex>1257.82, 591.257</vertex><vertex>470.899, 592.39</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+0.999996, 0.0029112, -0.358225, 
+-0.0029112, 0.999996, 2.89644
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>18</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.6</min_length>
+<min_width>0.1</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>0</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>0</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0</min_width>
+<max_width>0.17</max_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+<work_station_record>
+<pass>1</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>6562.52, 574.417</center>
+<width>278</width>
+<height>145</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>96.4597</value>
+<text></text>
+<found>1</found>
+<offset_x>5</offset_x>
+<offset_y>-2</offset_y>
+<angle>0</angle>
+<similarity>0.964597</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>6495.3, 519.386</vertex><vertex>6487.07, 525.749</vertex><vertex>6485.57, 624.945</vertex><vertex>6541.25, 627.297</vertex><vertex>6594.37, 626.204</vertex><vertex>6620.32, 621.741</vertex><vertex>6637.68, 615.52</vertex><vertex>6656.4, 602.044</vertex><vertex>6662.39, 586.323</vertex><vertex>6661.64, 566.858</vertex><vertex>6649.66, 546.645</vertex><vertex>6630.56, 533.827</vertex><vertex>6592.16, 524.733</vertex><vertex>6536.38, 519.492</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_5">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>6455.93, 569.954</center>
+<width>63</width>
+<height>142</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>91.1609</value>
+<text></text>
+<found>1</found>
+<offset_x>0</offset_x>
+<offset_y>1</offset_y>
+<angle>0</angle>
+<similarity>0.911609</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_6">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>6441.05, 510.285</vertex><vertex>6436.15, 568.051</vertex><vertex>6438.43, 627.073</vertex><vertex>6477.4, 625.619</vertex><vertex>6474.71, 568.545</vertex><vertex>6474.74, 512.531</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>4051.96, 566.825</center>
+<width>143</width>
+<height>135</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0.000629663, 3.64127, 
+-0.000629663, 1, 2.55587
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>5652.66, 574.856</center>
+<width>133</width>
+<height>140</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0.000629663, 3.64127, 
+-0.000629663, 1, 2.55587
+</transformation_matrix>
+</region>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>95</value>
+<text></text>
+<found>0</found>
+<offset_x>4</offset_x>
+<offset_y>-0.5</offset_y>
+<angle>-0.000629663</angle>
+<similarity>0.957079</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>4045.12, 517.515</vertex><vertex>4047.77, 620.317</vertex><vertex>5609.47, 622.623</vertex><vertex>5617.88, 578.218</vertex><vertex>5611.4, 529.135</vertex><vertex>5086.95, 527.55</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0.000629663, 3.64127, 
+-0.000629663, 1, 2.55587
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>3976.65, 566.289</center>
+<width>155</width>
+<height>69</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 0.000629663, 3.64127, 
+-0.000629663, 1, 2.55587
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_3">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>2476.49, 569.513</center>
+<width>245</width>
+<height>73</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>91.9493</value>
+<text></text>
+<found>1</found>
+<offset_x>5</offset_x>
+<offset_y>0</offset_y>
+<angle>0</angle>
+<similarity>0.919493</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_3">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>2016.64, 525.506</vertex><vertex>2015.3, 579.059</vertex><vertex>2022.78, 617.988</vertex><vertex>3280.47, 624.154</vertex><vertex>3282.03, 523.926</vertex><vertex>2617, 525.216</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>2482.93, 563.995</center>
+<width>251</width>
+<height>72</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>3100.51, 567.56</center>
+<width>355</width>
+<height>72</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, 0
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_7">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1093.4, 577.368</center>
+<width>302</width>
+<height>133</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>97.7907</value>
+<text></text>
+<found>1</found>
+<offset_x>5</offset_x>
+<offset_y>-2</offset_y>
+<angle>0</angle>
+<similarity>0.977907</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_4">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>1161.63, 522.139</vertex><vertex>1167.62, 528.877</vertex><vertex>1169.12, 625.452</vertex><vertex>1043.75, 624.774</vertex><vertex>1022.9, 613.475</vertex><vertex>1007.74, 593.901</vertex><vertex>1001.43, 565.486</vertex><vertex>1009.01, 549.068</vertex><vertex>1024.79, 534.545</vertex><vertex>1039.95, 525.705</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_4">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1190.04, 571.023</center>
+<width>64</width>
+<height>134</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>95.549</value>
+<text></text>
+<found>1</found>
+<offset_x>0</offset_x>
+<offset_y>0</offset_y>
+<angle>0</angle>
+<similarity>0.95549</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_5">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>1213.32, 515.097</vertex><vertex>1215.62, 572.118</vertex><vertex>1214.81, 628.891</vertex><vertex>1178.13, 628.517</vertex><vertex>1178.54, 598.815</vertex><vertex>1179.03, 538.995</vertex><vertex>1178.34, 514.155</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 5, 
+0, 1, -2
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.1</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+<work_station_record>
+<pass>0</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1129.71, 600.455</center>
+<width>307</width>
+<height>140</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>94.9244</value>
+<text></text>
+<found>1</found>
+<offset_x>-4</offset_x>
+<offset_y>-1</offset_y>
+<angle>0</angle>
+<similarity>0.949244</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>1099.21, 546.006</vertex><vertex>1193.92, 542.637</vertex><vertex>1206.27, 549.375</vertex><vertex>1208.14, 649.694</vertex><vertex>1112.98, 648.571</vertex><vertex>1070.96, 644.616</vertex><vertex>1043.89, 626.093</vertex><vertex>1037.9, 602.885</vertex><vertex>1041.79, 582.324</vertex><vertex>1056.62, 566.009</vertex><vertex>1073.92, 553.65</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_5">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1235.66, 595.468</center>
+<width>65</width>
+<height>137</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>91.9331</value>
+<text></text>
+<found>1</found>
+<offset_x>0</offset_x>
+<offset_y>0</offset_y>
+<angle>0</angle>
+<similarity>0.919331</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_5">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>1250.15, 538.505</vertex><vertex>1254.19, 605.134</vertex><vertex>1250.64, 652.366</vertex><vertex>1217.7, 653.114</vertex><vertex>1218.1, 601.179</vertex><vertex>1215.14, 537.898</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_4">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>5077.99, 598.4</center>
+<width>559</width>
+<height>89</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -6, 
+0, 1, 1
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>86.2491</value>
+<text></text>
+<found>1</found>
+<offset_x>-6</offset_x>
+<offset_y>1</offset_y>
+<angle>0</angle>
+<similarity>0.862491</similarity>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_3">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>6628.65, 601.499</center>
+<width>304</width>
+<height>150</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -18, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>97.1367</value>
+<text></text>
+<found>1</found>
+<offset_x>-18</offset_x>
+<offset_y>2</offset_y>
+<angle>0</angle>
+<similarity>0.971367</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_4">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>6657.97, 547.117</vertex><vertex>6687.63, 557.994</vertex><vertex>6708.4, 578.263</vertex><vertex>6711.86, 604.96</vertex><vertex>6703.45, 630.668</vertex><vertex>6680.22, 647.477</vertex><vertex>6654.01, 652.421</vertex><vertex>6543.36, 651.02</vertex><vertex>6545.61, 552.947</vertex><vertex>6551.59, 546.958</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -18, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>20</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_6">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>6515.11, 602.726</center>
+<width>68</width>
+<height>154</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -17, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>95.4802</value>
+<text></text>
+<found>1</found>
+<offset_x>1</offset_x>
+<offset_y>0</offset_y>
+<angle>0</angle>
+<similarity>0.954802</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_6">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>6531.61, 540.849</vertex><vertex>6530.89, 602.529</vertex><vertex>6533.29, 654.374</vertex><vertex>6499.6, 651.38</vertex><vertex>6495.74, 606.866</vertex><vertex>6497.99, 541.343</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -17, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>6317.78, 604.885</center>
+<width>174</width>
+<height>78</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -18, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>6316.58, 604.512</center>
+<width>133</width>
+<height>55</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 0, -18, 
+0, 1, 2
+</transformation_matrix>
+</region>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>182.451</value>
+<text></text>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="brightness_sensor" name="brightness_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>6156.24, 600.695</center>
+<width>27</width>
+<height>57</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -18, 
+0, 1, 2
+</transformation_matrix>
+</region>
+<detector type="brightness">
+<threshold_high>255</threshold_high>
+<threshold_low>0</threshold_low>
+</detector>
+<result type="detect_result">
+<pass>1</pass>
+<reason>RESULT_BRIGHTNESS</reason>
+<type>4</type>
+<value>157.626</value>
+<text></text>
+</result>
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>2171.85, 598.67</center>
+<width>368</width>
+<height>136</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>5, 5</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>94.0754</value>
+<text></text>
+<found>1</found>
+<offset_x>-4</offset_x>
+<offset_y>-1</offset_y>
+<angle>0</angle>
+<similarity>0.940754</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>3720.65, 545.927</vertex><vertex>3719.52, 591.913</vertex><vertex>3723.65, 641.754</vertex><vertex>2075.33, 643.45</vertex><vertex>2065.32, 597.564</vertex><vertex>2072.81, 554.142</vertex><vertex>2906.33, 553.613</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>2040.75, 607.31</center>
+<width>65</width>
+<height>174</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, 0, -4, 
+0, 1, -1
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_7">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="rect">
+<center>4934.16, 596.849</center>
+<width>244</width>
+<height>64</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>5218.17, 597.162</center>
+<width>242</width>
+<height>63</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>92</value>
+<text></text>
+<found>0</found>
+<offset_x>-6</offset_x>
+<offset_y>0.5</offset_y>
+<angle>0.00352108</angle>
+<similarity>0.922698</similarity>
+</result>
+</sensor>
+<node>
+<sensor type="edge_sensor" name="edge_sensor_3">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>4610.51, 546.429</vertex><vertex>4611.22, 646.79</vertex><vertex>5667.09, 648.971</vertex><vertex>5673.44, 589.219</vertex><vertex>5667.3, 544.321</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>5513.71, 599.506</center>
+<width>128</width>
+<height>52</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>4934.75, 597.085</center>
+<width>249</width>
+<height>63</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>5215.23, 596.563</center>
+<width>247</width>
+<height>62</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>5697.92, 587.607</center>
+<width>66</width>
+<height>189</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+0.999994, -0.00352107, -3.86557, 
+0.00352107, 0.999994, -17.3728
+</transformation_matrix>
+</region>
+</region>
+<detector type="uniform_edge">
+<edge_type>0</edge_type>
+<shrink_level>0</shrink_level>
+<non_maxmal_supression>0</non_maxmal_supression>
+<defect>
+<item>
+<enabled>1</enabled>
+<threshold>15</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.2</min_length>
+<min_width>0.2</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+<node>
+<sensor type="measure_table_sensor" name="measure_table_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>2</surface_code>
+<sort>1</sort>
+<region type="icon">
+<position>6593.65, 272.967</position>
+<icon_name>measure_table_sensor</icon_name>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+</region>
+<result type="detect_result">
+<pass>0</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<measure_table>
+<item>
+<caption>Switch</caption>
+<sensor_1>brightness_sensor_1</sensor_1>
+<sensor_2>brightness_sensor_2</sensor_2>
+<combine_method>2</combine_method>
+<check_value>1</check_value>
+<min_value>7</min_value>
+<max_value>20</max_value>
+<sort>4</sort>
+<area>Switch</area>
+<pass>0</pass>
+<value>24.8245</value>
+</item>
+</measure_table>
+</sensor>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+<work_station_record>
+<pass>0</pass>
+<camera_result>
+<item>
+<is_grabed>1</is_grabed>
+</item>
+</camera_result>
+<check_result>
+<merge_info>
+<transformation_matrix>
+1, 0, 0, 
+0, 1, 0
+</transformation_matrix>
+<boundary>
+</boundary>
+</merge_info>
+<sensor_layout>
+<node>
+<sensor type="global_alignment_sensor" name="global_alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>1</surface_code>
+<sort>1</sort>
+<region type="rect_corner">
+<corner_enabled>1</corner_enabled>
+<corner_1>1475.39, 1047.76</corner_1>
+<corner_2>1696.66, 1050.27</corner_2>
+<corner_3>1671.8, 1273.91</corner_3>
+<corner_4>1618.65, 950.72</corner_4>
+<origin_enabled>0</origin_enabled>
+<origin>100,100</origin>
+<center>6184.94, 3912.99</center>
+<width>11379</width>
+<height>5634</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>5</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>99</value>
+<text></text>
+<found>0</found>
+<offset_x>-5.5</offset_x>
+<offset_y>0.75</offset_y>
+<angle>0.000646217</angle>
+<similarity>0.990131</similarity>
+</result>
+<level>5</level>
+<origin_enabled>0</origin_enabled>
+<origin>100,100</origin>
+<detail_align>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0.7</min_similarity>
+<search_range>1, 1</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>10, 10</max_offset>
+</detector>
+</detail_align>
+</sensor>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_1">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>1</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>1225.74, 3968.45</center>
+<width>910</width>
+<height>843</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, -1.98364, 
+0.000646217, 1, 2.77617
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>97.663</value>
+<text></text>
+<found>1</found>
+<offset_x>1</offset_x>
+<offset_y>6</offset_y>
+<angle>0</angle>
+<similarity>0.97663</similarity>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="alignment_sensor" name="alignment_sensor_2">
+<group></group>
+<filter type="NULL">
+</filter>
+<surface_code>1</surface_code>
+<sort>1</sort>
+<region type="rect">
+<center>11143.7, 3951.94</center>
+<width>194</width>
+<height>862</height>
+<angle>0</angle>
+<is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, 0.0176532, 
+0.000646217, 1, 0.777466
+</transformation_matrix>
+</region>
+<detector type="template_match">
+<enabled>1</enabled>
+<match_level>4</match_level>
+<min_similarity>0</min_similarity>
+<search_range>2, 2</search_range>
+<search_angle>0</search_angle>
+<check_enabled>0</check_enabled>
+<max_offset>2, 2</max_offset>
+</detector>
+<result type="alignment_result">
+<pass>1</pass>
+<reason>RESULT_SIMILARITY</reason>
+<type>4</type>
+<value>97.42</value>
+<text></text>
+<found>1</found>
+<offset_x>3</offset_x>
+<offset_y>4</offset_y>
+<angle>0</angle>
+<similarity>0.9742</similarity>
+</result>
+</sensor>
+</node>
+<node>
+<sensor type="glass_sensor" name="smooth_surface_sensor_1">
+<group></group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>0</surface_code>
+<sort>1</sort>
+<region type="polygon"><vertex>1809.79, 1545.76</vertex><vertex>1813.78, 6393.15</vertex><vertex>10483.7, 6362.7</vertex><vertex>10474.3, 1560.53</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>2</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1.5</min_length>
+<min_width>0</min_width>
+<max_width>0.17</max_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>2</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>10</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.5</min_length>
+<min_width>0.201</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>2</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>50</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1</min_length>
+<min_width>0</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>0</pass>
+<reason>RESULT_MAX_LENGTH</reason>
+<type>1</type>
+<value>1.53132</value>
+<text></text>
+<defect>
+<item>
+<type>1</type>
+<sort>1</sort>
+<surface>0</surface>
+<item>1</item>
+<spec>1</spec>
+<unit>0</unit>
+<area_unit>1</area_unit>
+<pixel_size>0.0139339</pixel_size>
+<area>1071</area>
+<length>1.53132</length>
+<width>0.161239</width>
+<level>0</level>
+<category>Scratch-AA-Minor</category>
+<message></message>
+<fail>1</fail>
+<data>1</data>
+<center>5044.03, 5944.23</center>
+<boundary>
+<bound_box><point>4986.6, 5976.47</point><point>5094.92, 5957.89</point><point>5088.33, 5919.48</point><point>4980.01, 5938.07</point></bound_box>
+<region><polygon><point>5075, 5926</point><point>5076, 5927</point><point>5076, 5928</point><point>5075, 5929</point><point>5074, 5929</point><point>5074, 5930</point><point>5073, 5931</point><point>5072, 5931</point><point>5071, 5930</point><point>5071, 5929</point><point>5070, 5930</point><point>5069, 5930</point><point>5068, 5931</point><point>5067, 5930</point><point>5067, 5929</point><point>5066, 5929</point><point>5065, 5930</point><point>5064, 5929</point><point>5063, 5928</point><point>5062, 5928</point><point>5061, 5928</point><point>5060, 5929</point><point>5060, 5930</point><point>5060, 5931</point><point>5061, 5932</point><point>5061, 5933</point><point>5060, 5934</point><point>5061, 5935</point><point>5061, 5936</point><point>5062, 5936</point><point>5063, 5936</point><point>5064, 5936</point><point>5065, 5937</point><point>5065, 5938</point><point>5065, 5939</point><point>5066, 5940</point><point>5066, 5941</point><point>5066, 5942</point><point>5065, 5943</point><point>5065, 5944</point><point>5064, 5945</point><point>5063, 5945</point><point>5062, 5945</point><point>5061, 5945</point><point>5060, 5944</point><point>5060, 5943</point><point>5061, 5942</point><point>5062, 5941</point><point>5062, 5940</point><point>5061, 5941</point><point>5060, 5942</point><point>5059, 5942</point><point>5058, 5941</point><point>5057, 5942</point><point>5056, 5942</point><point>5056, 5943</point><point>5056, 5944</point><point>5055, 5945</point><point>5054, 5944</point><point>5053, 5943</point><point>5053, 5942</point><point>5053, 5941</point><point>5053, 5940</point><point>5053, 5939</point><point>5052, 5938</point><point>5051, 5939</point><point>5050, 5939</point><point>5049, 5938</point><point>5048, 5937</point><point>5048, 5936</point><point>5048, 5935</point><point>5049, 5934</point><point>5048, 5933</point><point>5047, 5934</point><point>5046, 5935</point><point>5045, 5935</point><point>5044, 5934</point><point>5043, 5933</point><point>5042, 5933</point><point>5041, 5933</point><point>5040, 5933</point><point>5039, 5932</point><point>5038, 5932</point><point>5037, 5933</point><point>5036, 5933</point><point>5035, 5932</point><point>5035, 5931</point><point>5035, 5930</point><point>5035, 5931</point><point>5034, 5932</point><point>5033, 5933</point><point>5032, 5933</point><point>5031, 5932</point><point>5030, 5931</point><point>5030, 5930</point><point>5030, 5931</point><point>5029, 5932</point><point>5028, 5933</point><point>5027, 5934</point><point>5026, 5934</point><point>5025, 5934</point><point>5024, 5934</point><point>5023, 5935</point><point>5022, 5935</point><point>5022, 5936</point><point>5021, 5937</point><point>5020, 5938</point><point>5019, 5939</point><point>5019, 5940</point><point>5019, 5941</point><point>5018, 5942</point><point>5018, 5943</point><point>5017, 5944</point><point>5016, 5944</point><point>5015, 5944</point><point>5014, 5944</point><point>5013, 5944</point><point>5012, 5944</point><point>5012, 5945</point><point>5011, 5946</point><point>5010, 5947</point><point>5009, 5946</point><point>5008, 5945</point><point>5008, 5944</point><point>5008, 5943</point><point>5007, 5943</point><point>5006, 5944</point><point>5007, 5945</point><point>5008, 5945</point><point>5009, 5946</point><point>5008, 5947</point><point>5007, 5947</point><point>5006, 5947</point><point>5005, 5948</point><point>5004, 5948</point><point>5003, 5948</point><point>5002, 5948</point><point>5001, 5948</point><point>5000, 5948</point><point>5000, 5949</point><point>5001, 5950</point><point>5000, 5951</point><point>4999, 5951</point><point>4998, 5951</point><point>4998, 5952</point><point>4997, 5953</point><point>4997, 5954</point><point>4996, 5955</point><point>4995, 5956</point><point>4994, 5957</point><point>4993, 5957</point><point>4992, 5957</point><point>4992, 5958</point><point>4992, 5959</point><point>4991, 5960</point><point>4990, 5961</point><point>4990, 5962</point><point>4990, 5963</point><point>4989, 5964</point><point>4989, 5965</point><point>4989, 5966</point><point>4988, 5967</point><point>4987, 5968</point><point>4986, 5969</point><point>4986, 5970</point><point>4987, 5971</point><point>4988, 5970</point><point>4988, 5969</point><point>4989, 5968</point><point>4990, 5968</point><point>4991, 5967</point><point>4991, 5966</point><point>4991, 5965</point><point>4992, 5964</point><point>4993, 5964</point><point>4994, 5964</point><point>4994, 5963</point><point>4995, 5962</point><point>4996, 5961</point><point>4997, 5960</point><point>4998, 5961</point><point>4999, 5961</point><point>4998, 5960</point><point>4999, 5959</point><point>5000, 5958</point><point>5001, 5958</point><point>5002, 5958</point><point>5003, 5958</point><point>5004, 5959</point><point>5003, 5958</point><point>5003, 5957</point><point>5002, 5956</point><point>5001, 5955</point><point>5002, 5954</point><point>5003, 5953</point><point>5004, 5952</point><point>5005, 5952</point><point>5006, 5953</point><point>5007, 5952</point><point>5008, 5951</point><point>5009, 5951</point><point>5010, 5951</point><point>5011, 5951</point><point>5011, 5950</point><point>5012, 5949</point><point>5013, 5949</point><point>5014, 5950</point><point>5015, 5950</point><point>5016, 5949</point><point>5017, 5949</point><point>5018, 5949</point><point>5019, 5948</point><point>5020, 5948</point><point>5021, 5949</point><point>5022, 5948</point><point>5023, 5947</point><point>5024, 5947</point><point>5023, 5947</point><point>5022, 5946</point><point>5022, 5945</point><point>5023, 5944</point><point>5024, 5944</point><point>5025, 5944</point><point>5026, 5945</point><point>5026, 5946</point><point>5027, 5947</point><point>5027, 5948</point><point>5027, 5947</point><point>5027, 5946</point><point>5026, 5945</point><point>5025, 5944</point><point>5025, 5943</point><point>5024, 5942</point><point>5025, 5941</point><point>5026, 5941</point><point>5027, 5942</point><point>5026, 5941</point><point>5026, 5940</point><point>5026, 5939</point><point>5027, 5938</point><point>5028, 5939</point><point>5029, 5939</point><point>5030, 5938</point><point>5030, 5937</point><point>5031, 5936</point><point>5032, 5936</point><point>5033, 5937</point><point>5032, 5938</point><point>5032, 5939</point><point>5033, 5940</point><point>5034, 5940</point><point>5035, 5941</point><point>5035, 5942</point><point>5034, 5943</point><point>5035, 5943</point><point>5036, 5942</point><point>5035, 5941</point><point>5035, 5940</point><point>5035, 5939</point><point>5034, 5938</point><point>5035, 5937</point><point>5036, 5937</point><point>5037, 5936</point><point>5038, 5936</point><point>5039, 5937</point><point>5039, 5938</point><point>5039, 5939</point><point>5040, 5940</point><point>5041, 5939</point><point>5042, 5938</point><point>5043, 5939</point><point>5043, 5940</point><point>5043, 5941</point><point>5044, 5941</point><point>5045, 5942</point><point>5045, 5943</point><point>5044, 5944</point><point>5043, 5944</point><point>5042, 5943</point><point>5042, 5944</point><point>5043, 5944</point><point>5044, 5944</point><point>5045, 5945</point><point>5045, 5946</point><point>5046, 5947</point><point>5047, 5947</point><point>5048, 5946</point><point>5049, 5946</point><point>5050, 5946</point><point>5051, 5947</point><point>5050, 5948</point><point>5049, 5949</point><point>5050, 5949</point><point>5051, 5949</point><point>5052, 5949</point><point>5053, 5950</point><point>5054, 5950</point><point>5055, 5950</point><point>5056, 5951</point><point>5055, 5952</point><point>5054, 5953</point><point>5053, 5953</point><point>5052, 5952</point><point>5051, 5952</point><point>5052, 5953</point><point>5053, 5953</point><point>5054, 5954</point><point>5055, 5953</point><point>5056, 5953</point><point>5057, 5954</point><point>5057, 5955</point><point>5057, 5956</point><point>5057, 5957</point><point>5058, 5956</point><point>5059, 5955</point><point>5060, 5956</point><point>5060, 5957</point><point>5059, 5958</point><point>5060, 5958</point><point>5061, 5958</point><point>5062, 5958</point><point>5063, 5958</point><point>5064, 5958</point><point>5065, 5958</point><point>5066, 5959</point><point>5067, 5960</point><point>5067, 5961</point><point>5067, 5962</point><point>5068, 5962</point><point>5069, 5961</point><point>5068, 5961</point><point>5067, 5960</point><point>5068, 5959</point><point>5069, 5958</point><point>5070, 5957</point><point>5071, 5958</point><point>5071, 5959</point><point>5071, 5960</point><point>5072, 5960</point><point>5073, 5959</point><point>5073, 5958</point><point>5073, 5957</point><point>5073, 5956</point><point>5073, 5955</point><point>5072, 5954</point><point>5072, 5953</point><point>5072, 5952</point><point>5072, 5951</point><point>5071, 5950</point><point>5071, 5949</point><point>5071, 5948</point><point>5072, 5947</point><point>5073, 5947</point><point>5074, 5947</point><point>5075, 5947</point><point>5075, 5946</point><point>5076, 5945</point><point>5075, 5944</point><point>5076, 5943</point><point>5077, 5942</point><point>5076, 5942</point><point>5076, 5943</point><point>5075, 5944</point><point>5074, 5944</point><point>5075, 5945</point><point>5075, 5946</point><point>5074, 5947</point><point>5073, 5946</point><point>5072, 5946</point><point>5071, 5946</point><point>5070, 5946</point><point>5069, 5946</point><point>5068, 5945</point><point>5068, 5944</point><point>5068, 5943</point><point>5068, 5942</point><point>5067, 5941</point><point>5067, 5940</point><point>5066, 5939</point><point>5066, 5938</point><point>5066, 5937</point><point>5066, 5936</point><point>5066, 5935</point><point>5067, 5934</point><point>5068, 5933</point><point>5069, 5932</point><point>5070, 5932</point><point>5071, 5932</point><point>5072, 5932</point><point>5073, 5932</point><point>5074, 5933</point><point>5073, 5934</point><point>5072, 5935</point><point>5071, 5934</point><point>5070, 5934</point><point>5070, 5935</point><point>5071, 5935</point><point>5072, 5936</point><point>5073, 5936</point><point>5074, 5935</point><point>5075, 5934</point><point>5076, 5934</point><point>5077, 5933</point><point>5078, 5932</point><point>5079, 5931</point><point>5080, 5932</point><point>5080, 5933</point><point>5079, 5934</point><point>5079, 5935</point><point>5079, 5936</point><point>5078, 5937</point><point>5078, 5938</point><point>5077, 5939</point><point>5076, 5939</point><point>5077, 5939</point><point>5078, 5939</point><point>5079, 5939</point><point>5080, 5940</point><point>5081, 5941</point><point>5082, 5940</point><point>5083, 5940</point><point>5084, 5940</point><point>5085, 5939</point><point>5086, 5939</point><point>5087, 5939</point><point>5088, 5939</point><point>5089, 5940</point><point>5090, 5939</point><point>5091, 5938</point><point>5090, 5937</point><point>5090, 5936</point><point>5090, 5935</point><point>5089, 5934</point><point>5089, 5933</point><point>5089, 5934</point><point>5088, 5935</point><point>5088, 5936</point><point>5088, 5937</point><point>5087, 5938</point><point>5086, 5938</point><point>5085, 5938</point><point>5084, 5938</point><point>5083, 5939</point><point>5082, 5939</point><point>5081, 5938</point><point>5080, 5937</point><point>5081, 5936</point><point>5081, 5935</point><point>5081, 5934</point><point>5081, 5933</point><point>5080, 5932</point><point>5081, 5931</point><point>5082, 5931</point><point>5083, 5930</point><point>5084, 5931</point><point>5084, 5932</point><point>5084, 5933</point><point>5084, 5934</point><point>5085, 5934</point><point>5086, 5933</point><point>5086, 5932</point><point>5087, 5931</point><point>5088, 5931</point><point>5088, 5930</point><point>5087, 5929</point><point>5086, 5929</point><point>5085, 5929</point><point>5084, 5929</point><point>5083, 5929</point><point>5082, 5929</point><point>5081, 5929</point><point>5080, 5929</point><point>5079, 5928</point><point>5078, 5928</point><point>5077, 5927</point><point>5077, 5926</point><point>5076, 5926</point></polygon></region>
+</boundary>
+</item>
+</defect>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_2">
+<group>1</group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>1</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>10558.6, 1516.24</vertex><vertex>10902.4, 1503.56</vertex><vertex>11220.6, 1570.14</vertex><vertex>11414.3, 1819.06</vertex><vertex>11475.4, 2113.28</vertex><vertex>11498.3, 5899.42</vertex><vertex>11376.9, 6221.22</vertex><vertex>11194.6, 6378.68</vertex><vertex>10867.1, 6443.02</vertex><vertex>10562.2, 6415.42</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="circle"><center>11120.1, 3218.8</center><radius>138.333</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>10488.8, 3995.36</center>
+<width>218</width>
+<height>5164</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>11586.9, 3945.33</center>
+<width>315</width>
+<height>4995</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>11133.8, 3983.12</center>
+<width>210</width>
+<height>856</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="circle"><center>11446.7, 3644.51</center><radius>49.6238</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="circle"><center>11450.4, 3970.12</center><radius>77.213</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>7</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>0</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1</min_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>10</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.25</min_length>
+<min_width>0.201</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>0</pass>
+<reason>RESULT_MAX_LENGTH</reason>
+<type>1</type>
+<value>3.49261</value>
+<text></text>
+<defect>
+<item>
+<type>0</type>
+<sort>2</sort>
+<surface>1</surface>
+<item>1</item>
+<spec>1</spec>
+<unit>0</unit>
+<area_unit>1</area_unit>
+<pixel_size>0.0139339</pixel_size>
+<area>746</area>
+<length>3.49261</length>
+<width>0.0286031</width>
+<level>0</level>
+<category>Nick-A-S</category>
+<message></message>
+<fail>1</fail>
+<data>1</data>
+<center>10910.6, 1825.44</center>
+<boundary>
+<bound_box><point>10885.9, 1710.89</point><point>10933.1, 1957.07</point><point>10939.2, 1955.9</point><point>10892, 1709.72</point></bound_box>
+<region><polygon><point>10888, 1711</point><point>10888, 1712</point><point>10888, 1713</point><point>10888, 1714</point><point>10889, 1715</point><point>10889, 1716</point><point>10889, 1717</point><point>10889, 1718</point><point>10889, 1719</point><point>10889, 1720</point><point>10890, 1721</point><point>10889, 1722</point><point>10889, 1723</point><point>10889, 1724</point><point>10890, 1725</point><point>10890, 1726</point><point>10891, 1727</point><point>10890, 1728</point><point>10890, 1729</point><point>10891, 1730</point><point>10891, 1731</point><point>10891, 1732</point><point>10891, 1733</point><point>10891, 1734</point><point>10892, 1735</point><point>10892, 1736</point><point>10892, 1737</point><point>10892, 1738</point><point>10893, 1739</point><point>10893, 1740</point><point>10893, 1741</point><point>10893, 1742</point><point>10893, 1743</point><point>10893, 1744</point><point>10894, 1744</point><point>10895, 1745</point><point>10895, 1746</point><point>10895, 1747</point><point>10895, 1748</point><point>10895, 1749</point><point>10895, 1750</point><point>10895, 1751</point><point>10895, 1752</point><point>10895, 1753</point><point>10896, 1754</point><point>10897, 1755</point><point>10897, 1756</point><point>10896, 1757</point><point>10897, 1758</point><point>10897, 1759</point><point>10897, 1760</point><point>10897, 1761</point><point>10897, 1762</point><point>10897, 1763</point><point>10898, 1764</point><point>10898, 1765</point><point>10898, 1766</point><point>10898, 1767</point><point>10898, 1768</point><point>10898, 1769</point><point>10899, 1770</point><point>10899, 1771</point><point>10899, 1772</point><point>10899, 1773</point><point>10899, 1774</point><point>10900, 1775</point><point>10900, 1776</point><point>10900, 1777</point><point>10900, 1778</point><point>10900, 1779</point><point>10901, 1780</point><point>10901, 1781</point><point>10901, 1782</point><point>10901, 1783</point><point>10901, 1784</point><point>10901, 1785</point><point>10901, 1786</point><point>10901, 1787</point><point>10902, 1788</point><point>10903, 1789</point><point>10902, 1790</point><point>10902, 1791</point><point>10903, 1792</point><point>10903, 1793</point><point>10903, 1794</point><point>10903, 1795</point><point>10904, 1796</point><point>10904, 1797</point><point>10905, 1798</point><point>10904, 1799</point><point>10904, 1800</point><point>10904, 1801</point><point>10905, 1802</point><point>10906, 1803</point><point>10906, 1804</point><point>10906, 1805</point><point>10906, 1806</point><point>10906, 1807</point><point>10906, 1808</point><point>10906, 1809</point><point>10907, 1810</point><point>10907, 1811</point><point>10907, 1812</point><point>10907, 1813</point><point>10907, 1814</point><point>10908, 1815</point><point>10908, 1816</point><point>10908, 1817</point><point>10908, 1818</point><point>10908, 1819</point><point>10908, 1820</point><point>10908, 1821</point><point>10909, 1822</point><point>10909, 1823</point><point>10909, 1824</point><point>10910, 1825</point><point>10910, 1826</point><point>10910, 1827</point><point>10910, 1828</point><point>10910, 1829</point><point>10910, 1830</point><point>10910, 1831</point><point>10911, 1832</point><point>10911, 1833</point><point>10911, 1834</point><point>10911, 1835</point><point>10912, 1836</point><point>10912, 1837</point><point>10912, 1838</point><point>10912, 1839</point><point>10913, 1840</point><point>10913, 1841</point><point>10913, 1842</point><point>10912, 1843</point><point>10913, 1844</point><point>10914, 1845</point><point>10914, 1846</point><point>10914, 1847</point><point>10914, 1848</point><point>10914, 1849</point><point>10914, 1850</point><point>10915, 1851</point><point>10915, 1852</point><point>10915, 1853</point><point>10915, 1854</point><point>10915, 1855</point><point>10915, 1856</point><point>10916, 1857</point><point>10916, 1858</point><point>10916, 1859</point><point>10916, 1860</point><point>10917, 1861</point><point>10917, 1862</point><point>10917, 1863</point><point>10918, 1864</point><point>10917, 1865</point><point>10918, 1866</point><point>10918, 1867</point><point>10918, 1868</point><point>10918, 1869</point><point>10919, 1870</point><point>10918, 1871</point><point>10918, 1872</point><point>10918, 1873</point><point>10919, 1874</point><point>10919, 1875</point><point>10920, 1876</point><point>10920, 1877</point><point>10920, 1878</point><point>10920, 1879</point><point>10920, 1880</point><point>10921, 1881</point><point>10921, 1882</point><point>10921, 1883</point><point>10921, 1884</point><point>10921, 1885</point><point>10921, 1886</point><point>10922, 1887</point><point>10922, 1888</point><point>10922, 1889</point><point>10922, 1890</point><point>10922, 1891</point><point>10922, 1892</point><point>10922, 1893</point><point>10923, 1894</point><point>10923, 1895</point><point>10924, 1896</point><point>10923, 1897</point><point>10923, 1898</point><point>10924, 1899</point><point>10924, 1900</point><point>10924, 1901</point><point>10924, 1902</point><point>10924, 1903</point><point>10924, 1904</point><point>10925, 1904</point><point>10926, 1905</point><point>10926, 1906</point><point>10925, 1907</point><point>10925, 1908</point><point>10925, 1909</point><point>10926, 1910</point><point>10926, 1911</point><point>10926, 1912</point><point>10926, 1913</point><point>10927, 1914</point><point>10927, 1915</point><point>10928, 1916</point><point>10928, 1917</point><point>10927, 1918</point><point>10927, 1919</point><point>10928, 1920</point><point>10928, 1921</point><point>10928, 1922</point><point>10928, 1923</point><point>10929, 1924</point><point>10929, 1925</point><point>10930, 1926</point><point>10930, 1927</point><point>10929, 1928</point><point>10929, 1929</point><point>10930, 1930</point><point>10930, 1931</point><point>10930, 1932</point><point>10930, 1933</point><point>10930, 1934</point><point>10931, 1935</point><point>10931, 1936</point><point>10932, 1937</point><point>10932, 1938</point><point>10932, 1939</point><point>10932, 1940</point><point>10932, 1941</point><point>10933, 1942</point><point>10932, 1943</point><point>10932, 1944</point><point>10932, 1945</point><point>10933, 1946</point><point>10934, 1947</point><point>10934, 1948</point><point>10933, 1949</point><point>10933, 1950</point><point>10933, 1951</point><point>10933, 1952</point><point>10934, 1953</point><point>10934, 1954</point><point>10934, 1955</point><point>10935, 1956</point><point>10936, 1956</point><point>10936, 1955</point><point>10936, 1954</point><point>10936, 1953</point><point>10935, 1952</point><point>10934, 1951</point><point>10935, 1950</point><point>10935, 1949</point><point>10935, 1948</point><point>10935, 1947</point><point>10935, 1946</point><point>10935, 1945</point><point>10934, 1944</point><point>10934, 1943</point><point>10934, 1942</point><point>10933, 1941</point><point>10933, 1940</point><point>10933, 1939</point><point>10933, 1938</point><point>10932, 1937</point><point>10932, 1936</point><point>10931, 1935</point><point>10931, 1934</point><point>10931, 1933</point><point>10931, 1932</point><point>10931, 1931</point><point>10931, 1930</point><point>10931, 1929</point><point>10931, 1928</point><point>10930, 1927</point><point>10930, 1926</point><point>10930, 1925</point><point>10930, 1924</point><point>10930, 1923</point><point>10930, 1922</point><point>10929, 1921</point><point>10929, 1920</point><point>10929, 1919</point><point>10929, 1918</point><point>10928, 1917</point><point>10928, 1916</point><point>10929, 1915</point><point>10929, 1914</point><point>10928, 1913</point><point>10928, 1912</point><point>10928, 1911</point><point>10928, 1910</point><point>10928, 1909</point><point>10927, 1908</point><point>10928, 1907</point><point>10927, 1906</point><point>10927, 1905</point><point>10927, 1904</point><point>10926, 1903</point><point>10926, 1902</point><point>10926, 1901</point><point>10926, 1900</point><point>10926, 1899</point><point>10925, 1898</point><point>10925, 1897</point><point>10925, 1896</point><point>10925, 1895</point><point>10924, 1894</point><point>10924, 1893</point><point>10924, 1892</point><point>10924, 1891</point><point>10924, 1890</point><point>10924, 1889</point><point>10923, 1888</point><point>10923, 1887</point><point>10923, 1886</point><point>10923, 1885</point><point>10923, 1884</point><point>10922, 1883</point><point>10922, 1882</point><point>10922, 1881</point><point>10921, 1880</point><point>10921, 1879</point><point>10921, 1878</point><point>10921, 1877</point><point>10921, 1876</point><point>10921, 1875</point><point>10921, 1874</point><point>10921, 1873</point><point>10920, 1872</point><point>10920, 1871</point><point>10919, 1870</point><point>10920, 1869</point><point>10920, 1868</point><point>10920, 1867</point><point>10920, 1866</point><point>10919, 1865</point><point>10918, 1864</point><point>10918, 1863</point><point>10918, 1862</point><point>10918, 1861</point><point>10918, 1860</point><point>10918, 1859</point><point>10918, 1858</point><point>10918, 1857</point><point>10918, 1856</point><point>10917, 1855</point><point>10917, 1854</point><point>10917, 1853</point><point>10917, 1852</point><point>10917, 1851</point><point>10917, 1850</point><point>10917, 1849</point><point>10916, 1848</point><point>10915, 1847</point><point>10915, 1846</point><point>10915, 1845</point><point>10915, 1844</point><point>10915, 1843</point><point>10915, 1842</point><point>10915, 1841</point><point>10914, 1840</point><point>10914, 1839</point><point>10915, 1838</point><point>10915, 1837</point><point>10914, 1836</point><point>10913, 1835</point><point>10913, 1834</point><point>10913, 1833</point><point>10913, 1832</point><point>10913, 1831</point><point>10912, 1830</point><point>10912, 1829</point><point>10913, 1828</point><point>10912, 1827</point><point>10912, 1826</point><point>10912, 1825</point><point>10912, 1824</point><point>10911, 1823</point><point>10911, 1822</point><point>10911, 1821</point><point>10911, 1820</point><point>10910, 1819</point><point>10910, 1818</point><point>10910, 1817</point><point>10910, 1816</point><point>10910, 1815</point><point>10910, 1814</point><point>10909, 1813</point><point>10910, 1812</point><point>10910, 1811</point><point>10909, 1810</point><point>10909, 1809</point><point>10909, 1808</point><point>10908, 1807</point><point>10908, 1806</point><point>10908, 1805</point><point>10907, 1804</point><point>10907, 1803</point><point>10907, 1802</point><point>10907, 1801</point><point>10907, 1800</point><point>10907, 1799</point><point>10907, 1798</point><point>10907, 1797</point><point>10907, 1796</point><point>10907, 1795</point><point>10906, 1794</point><point>10906, 1793</point><point>10906, 1792</point><point>10905, 1791</point><point>10905, 1790</point><point>10905, 1789</point><point>10905, 1788</point><point>10905, 1787</point><point>10905, 1786</point><point>10904, 1785</point><point>10904, 1784</point><point>10904, 1783</point><point>10904, 1782</point><point>10905, 1781</point><point>10905, 1780</point><point>10904, 1779</point><point>10903, 1778</point><point>10903, 1777</point><point>10903, 1776</point><point>10903, 1775</point><point>10903, 1774</point><point>10902, 1773</point><point>10902, 1772</point><point>10902, 1771</point><point>10902, 1770</point><point>10902, 1769</point><point>10901, 1768</point><point>10901, 1767</point><point>10901, 1766</point><point>10901, 1765</point><point>10900, 1764</point><point>10899, 1763</point><point>10899, 1762</point><point>10899, 1761</point><point>10899, 1760</point><point>10899, 1759</point><point>10899, 1758</point><point>10899, 1757</point><point>10899, 1756</point><point>10899, 1755</point><point>10898, 1754</point><point>10898, 1753</point><point>10897, 1752</point><point>10897, 1751</point><point>10897, 1750</point><point>10897, 1749</point><point>10897, 1748</point><point>10897, 1747</point><point>10896, 1746</point><point>10896, 1745</point><point>10896, 1744</point><point>10895, 1743</point><point>10895, 1742</point><point>10895, 1741</point><point>10895, 1740</point><point>10894, 1739</point><point>10894, 1738</point><point>10894, 1737</point><point>10895, 1736</point><point>10894, 1735</point><point>10894, 1734</point><point>10894, 1733</point><point>10894, 1732</point><point>10894, 1731</point><point>10893, 1730</point><point>10893, 1729</point><point>10893, 1728</point><point>10893, 1727</point><point>10892, 1726</point><point>10892, 1725</point><point>10892, 1724</point><point>10892, 1723</point><point>10891, 1722</point><point>10891, 1721</point><point>10891, 1720</point><point>10891, 1719</point><point>10890, 1718</point><point>10890, 1717</point><point>10890, 1716</point><point>10890, 1715</point><point>10890, 1714</point><point>10890, 1713</point><point>10889, 1712</point><point>10889, 1711</point></polygon></region>
+</boundary>
+</item>
+</defect>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+<node>
+<sensor type="smooth_surface_sensor" name="smooth_surface_sensor_3">
+<group>1</group>
+<filter type="GaussianFilter">
+<type>1</type>
+<sigma>1</sigma>
+</filter>
+<surface_code>1</surface_code>
+<sort>1</sort>
+<region type="composite">
+<region type="polygon"><vertex>1697.64, 1518.35</vertex><vertex>1686.34, 6439.44</vertex><vertex>1311.2, 6413.72</vertex><vertex>1007.18, 6316.82</vertex><vertex>877.778, 6174.58</vertex><vertex>801.814, 5872.11</vertex><vertex>778.841, 2017.12</vertex><vertex>932.637, 1669.89</vertex><vertex>1125.67, 1551.88</vertex><vertex>1413.06, 1518.47</vertex><is_mask>0</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="circle"><center>1189.84, 3989.5</center><radius>476.301</radius><is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>688.059, 4053.48</center>
+<width>262</width>
+<height>4652</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+<region type="rect">
+<center>1749.64, 4001.01</center>
+<width>198</width>
+<height>5278</height>
+<angle>0</angle>
+<is_mask>1</is_mask>
+<transformation_matrix>
+1, -0.000646217, -2.97976, 
+0.000646217, 1, -3.22447
+</transformation_matrix>
+</region>
+</region>
+<detector type="smooth_surface">
+<detect_result>0</detect_result>
+<window_width>128</window_width>
+<window_height>128</window_height>
+<defect>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>7</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>0</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>1</min_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>0</enabled>
+<range>1</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.2</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+<item>
+<enabled>1</enabled>
+<color>0</color>
+<threshold>10</threshold>
+<defect_finder>
+<sort><type>-1</type>
+<general><enabled>1</enabled>
+<sort>2</sort>
+</general>
+<scratch><enabled>1</enabled>
+<sort>1</sort>
+<aspect_ratio>5</aspect_ratio>
+</scratch><crack><enabled>0</enabled>
+<sort>3</sort>
+<aspect_ratio>10</aspect_ratio>
+<max_gap>40</max_gap>
+</crack></sort><defect_unit>0</defect_unit>
+<defect>
+<item>
+<length_defect>
+<min_length>0.25</min_length>
+<min_width>0.201</min_width>
+<min_count>1</min_count>
+</length_defect>
+</item>
+</defect>
+<scratch_linking>
+<enabled>1</enabled>
+<major_offset>1</major_offset>
+<minor_offset>0.1</minor_offset>
+<angle>30</angle>
+</scratch_linking>
+<cluster>
+<enabled>1</enabled>
+<range>2</range>
+<min_length>0</min_length>
+<max_length>1</max_length>
+<min_width>0</min_width>
+<max_width>0.7</max_width>
+<min_count>3</min_count>
+</cluster>
+</defect_finder>
+</item>
+</defect>
+</detector>
+<result type="defect_result">
+<pass>1</pass>
+<reason></reason>
+<type>0</type>
+<value>0</value>
+<text></text>
+</result>
+<child_sensor> 
+<enabled>0</enabled>
+</child_sensor> 
+</sensor>
+</node>
+</node>
+</sensor_layout>
+</check_result>
+</work_station_record>
+</work_station>
+</record>
