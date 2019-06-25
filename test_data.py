@@ -310,7 +310,6 @@ def prepare_data():
         json.dump(db, f, indent=4)
 
 
-
 def convert_data_to_csv(filename):
     db = None
     with open(filename) as f:
@@ -324,14 +323,27 @@ def convert_data_to_csv(filename):
         pd.to_csv('ready.csv', index=False)
 
 
-
+def load_270_json(folder):
+    ret = []
+    for fn in os.listdir(folder):
+        data = None
+        fullname = os.path.join(folder, fn)
+        if os.path.isfile(fullname):
+            with open(fullname) as f:
+                try:
+                    data = json.load(f)
+                except:
+                    pass
+        if data:
+            ret.append(data)
+    return ret
 
 
 # check_score()
 # d = parse_defect_xml('data270_xml\\123\\defect_123.xml')
 # with open('test\\test.json', 'w') as f:
 #     json.dump(d, f, indent=4)
-parse_270_log()
+# parse_270_log()
 # data = prepare_data_1('data270_json/355344086238212.json')
 # print(json.dumps(data, indent=4))
 # parse_defect_xml('data270_xml/iPhone6 Gold/123/defect_123.xml')

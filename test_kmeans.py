@@ -273,61 +273,92 @@ for fn in os.listdir('data270_json'):
     with open(os.path.join('data270_json', fn)) as f:
         db = json.load(f)
 '''
-nc = 25
-feature_measurement = []
-feature_surface_AA = []
-feature_surface_A = []
-feature_surface_B = []
-for fn in os.listdir(src):
-    fs = compute_features_from_file(os.path.join(src, fn))
-    feature_measurement.extend(fs['measurement'])
-    feature_surface_AA.extend(fs['surface_AA'])
-    feature_surface_A.extend(fs['surface_A'])
-    feature_surface_B.extend(fs['surface_B'])
-with open('test.json', 'w') as f:
-    json.dump(feature_measurement, f, indent=4)
-km_aa = KMeans(n_clusters=nc)
-x = pandas.DataFrame.from_dict(feature_surface_AA)
-km_aa.fit(x)
-km_a = KMeans(n_clusters=nc)
-x = pandas.DataFrame.from_dict(feature_surface_A)
-km_a.fit(x)
-km_b = KMeans(n_clusters=nc)
-x = pandas.DataFrame.from_dict(feature_surface_B)
-km_b.fit(x)
-ready = []
-for fn in os.listdir(src):
-    r = csv_new_record(nc)
-    fs = compute_features_from_file(os.path.join(src, fn))
-    r['vzw'] = fs['info']['vzw']
-    for i in fs['measurement']:
-        r[i['region']] = i['value']
-    if len(fs['surface_AA']) > 0:
-        x = pandas.DataFrame.from_dict(fs['surface_AA'])
-        p = km_aa.predict(x)
-        for i in p:
-            k = 'AA_{:03d}'.format(i)
-            if k in r:
-                r[k] += 1
-    if len(fs['surface_A']) > 0:
-        x = pandas.DataFrame.from_dict(fs['surface_A'])
-        p = km_a.predict(x)
-        for i in p:
-            k = 'A_{:03d}'.format(i)
-            if k in r:
-                r[k] += 1
-    if len(fs['surface_B']) > 0:
-        x = pandas.DataFrame.from_dict(fs['surface_B'])
-        p = km_b.predict(x)
-        for i in p:
-            k = 'B_{:03d}'.format(i)
-            if k in r:
-                r[k] += 1
-    ready.append(r)
-with open('ready.json', 'w') as f:
-    json.dump(ready, f, indent=4)
-df = pandas.DataFrame.from_dict(ready)
-df['label'] = df['vzw'].astype('category').cat.codes
-df.pop('vzw')
-df.to_csv('ready.csv', index=False)
+def test():
+    nc = 25
+    feature_measurement = []
+    feature_surface_AA = []
+    feature_surface_A = []
+    feature_surface_B = []
+    for fn in os.listdir(src):
+        fs = compute_features_from_file(os.path.join(src, fn))
+        feature_measurement.extend(fs['measurement'])
+        feature_surface_AA.extend(fs['surface_AA'])
+        feature_surface_A.extend(fs['surface_A'])
+        feature_surface_B.extend(fs['surface_B'])
+    with open('test.json', 'w') as f:
+        json.dump(feature_measurement, f, indent=4)
+    km_aa = KMeans(n_clusters=nc)
+    x = pandas.DataFrame.from_dict(feature_surface_AA)
+    km_aa.fit(x)
+    km_a = KMeans(n_clusters=nc)
+    x = pandas.DataFrame.from_dict(feature_surface_A)
+    km_a.fit(x)
+    km_b = KMeans(n_clusters=nc)
+    x = pandas.DataFrame.from_dict(feature_surface_B)
+    km_b.fit(x)
+    ready = []
+    for fn in os.listdir(src):
+        r = csv_new_record(nc)
+        fs = compute_features_from_file(os.path.join(src, fn))
+        r['vzw'] = fs['info']['vzw']
+        for i in fs['measurement']:
+            r[i['region']] = i['value']
+        if len(fs['surface_AA']) > 0:
+            x = pandas.DataFrame.from_dict(fs['surface_AA'])
+            p = km_aa.predict(x)
+            for i in p:
+                k = 'AA_{:03d}'.format(i)
+                if k in r:
+                    r[k] += 1
+        if len(fs['surface_A']) > 0:
+            x = pandas.DataFrame.from_dict(fs['surface_A'])
+            p = km_a.predict(x)
+            for i in p:
+                k = 'A_{:03d}'.format(i)
+                if k in r:
+                    r[k] += 1
+        if len(fs['surface_B']) > 0:
+            x = pandas.DataFrame.from_dict(fs['surface_B'])
+            p = km_b.predict(x)
+            for i in p:
+                k = 'B_{:03d}'.format(i)
+                if k in r:
+                    r[k] += 1
+        ready.append(r)
+    with open('ready.json', 'w') as f:
+        json.dump(ready, f, indent=4)
+    df = pandas.DataFrame.from_dict(ready)
+    df['label'] = df['vzw'].astype('category').cat.codes
+    df.pop('vzw')
+    df.to_csv('ready.csv', index=False)
 
+
+def load_270_json(folder='data270_json'):
+    ret = []
+    for fn in os.listdir(folder):
+        data = None
+        fullname = os.path.join(folder, fn)
+        if os.path.isfile(fullname):
+            with open(fullname) as f:
+                try:
+                    data = json.load(f)
+                except:
+                    pass
+        if data:
+            ret.append(data)
+    return ret
+
+
+def count_model_color(data):
+    if data is not None:
+        models = data['model'].unique()
+        colors = data['color'].unique()
+        for m in models:
+            for c in colors:
+                cnt = len(data[(data['model'] == m) & (data['color'] == c)])
+                if cnt > 0:
+                    print('{} {} are {}'.format(m, c, cnt))
+
+
+# db = load_270_json()
+# count_model_color(db)
