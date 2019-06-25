@@ -49,7 +49,7 @@ def parse_defect_xml(filename):
 
 
 def parse_270_log():
-    root = 'data270_xml'
+    root = '117_Testing Set'
     output= 'output'
     rg = re.compile(r'^defect_(\d*).xml$')
     vdb = None
@@ -331,10 +331,10 @@ def convert_data_to_csv(filename):
 # d = parse_defect_xml('data270_xml\\123\\defect_123.xml')
 # with open('test\\test.json', 'w') as f:
 #     json.dump(d, f, indent=4)
-# parse_270_log()
+parse_270_log()
 # data = prepare_data_1('data270_json/355344086238212.json')
 # print(json.dumps(data, indent=4))
 # parse_defect_xml('data270_xml/iPhone6 Gold/123/defect_123.xml')
 # prepare_data()
 # convert_data_to_csv('ready.json')
-put_together()
+# put_together()
