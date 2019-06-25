@@ -5,6 +5,7 @@ import os
 import pandas
 import re
 
+
 def num(s):
     try:
         return int(s)
@@ -50,7 +51,7 @@ def parse_defect_xml(filename):
 
 def parse_270_log():
     root = '117_Testing Set'
-    output= 'output'
+    output = 'output'
     rg = re.compile(r'^defect_(\d*).xml$')
     vdb = None
     with open('verizon_data.json') as f:

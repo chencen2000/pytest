@@ -360,5 +360,6 @@ def count_model_color(data):
                     print('{} {} are {}'.format(m, c, cnt))
 
 
+
 # db = load_270_json()
 # count_model_color(db)
