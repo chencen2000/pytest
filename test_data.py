@@ -91,11 +91,17 @@ def parse_classify_log_surface(surface, text):
                 s = s.strip()
                 pos = s.index('=')
                 if s.startswith('Totoal number on') and pos > 0:
-                    ret['All-{}-ALL'.format(surface)] = int(s[pos+1:])
+                    ret['All-{}-All'.format(surface)] = int(s[pos+1:])
                 elif s.startswith('Totoal number of major on') and pos > 0:
                     ret['All-{}-Major'.format(surface)] = int(s[pos+1:])
                 elif s.startswith('Zone') and pos > 0:
                     ret['All-{}-{}'.format(surface, s[0:pos].strip())] = int(s[pos + 1:])
+    return ret
+
+
+def parse_classify_log_flaws(surface, text):
+    ret = {}
+
     return ret
 
 
@@ -107,11 +113,18 @@ def parse_classify_log(filename):
                    flags=re.S)
     m = r.match(text)
     if m:
+        # ret.update(parse_classify_log_flaws(m.group(1)))
         ret.update(parse_classify_log_count(m.group(2)))
         ret.update(parse_classify_log_surface('AA', m.group(3)))
         ret.update(parse_classify_log_surface('A', m.group(4)))
         ret.update(parse_classify_log_surface('B', m.group(5)))
         ret.update(parse_classify_log_surface('C', m.group(6)))
+        a = 0
+        a += ret['All-AA-All']
+        a += ret['All-A-All']
+        a += ret['All-B-All']
+        a += ret['All-C-All']
+        ret['All-All-All'] = a
     return ret
 
 
@@ -421,6 +434,7 @@ def rule_base_test(src, target='test.csv'):
             db = json.load(f)
         if db:
             r = {
+                'All-All-All': 0,
                 'All-A-ALL': 0,
                 'All-A-Major': 0,
                 'All-AA-ALL': 0,
