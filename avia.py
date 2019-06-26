@@ -131,6 +131,26 @@ def get_features(data):
     }
 
 
+def get_feature_score(data):
+    features = {}
+    if data:
+        for d in data['defects']:
+            if d['class'] == 'defect':
+                k = '{}_{}'.format(d['surface'], d['type'])
+                v = d['length'] * d['area_mm'] * d['contrast'] / d['width']
+                if k not in features:
+                    features[k] = 0
+                features[k] += v
+                pass
+            elif d['class'] == 'measurement':
+                features[d['region']] = d['value']
+                pass
+            else:
+                pass
+        data['features'] = features
+    return data
+
+
 def put_together(root):
     all_data = {
         'defects': [],
@@ -163,6 +183,24 @@ def csv_record(nc_d):
     for i in range(0, nc_d):
         ret['D_{:03d}'.format(i+1)] = 0
     return ret
+
+
+def csv_recode_score():
+    return {
+        'vzw': 'D',
+        'AA_Scratch': 0,
+        'AA_Nick': 0,
+        'A_Scratch': 0,
+        'A_Nick': 0,
+        'A_PinDotGroup': 0,
+        'B_Scratch': 0,
+        'B_Nick': 0,
+        'B_PinDotGroup': 0,
+        'Logo': 0,
+        'Switch': 0,
+        'Rear_Cam': 0,
+        'Mic': 0,
+    }
 
 
 def seperate_defects_by_surface(defects):
@@ -281,6 +319,36 @@ def prepare_data(folder, nc_d=25):
     return ready_csv
 
 
+def prepare_data_score(folder):
+    db = []
+    for fn in os.listdir(folder):
+        data = None
+        fullname = os.path.join(folder, fn)
+        if os.path.isfile(fullname):
+            with open(fullname) as f:
+                try:
+                    data = json.load(f)
+                except:
+                    pass
+        if data:
+            fe = get_feature_score(data)
+            r = csv_recode_score()
+            r['vzw'] = fe['vzw']
+            r['model'] = fe['model']
+            r['color'] = fe['color']
+            for f in fe['features']:
+                if f in r:
+                    r[f] = fe['features'][f]
+            db.append(r)
+    with open('test.json', 'w') as f:
+        json.dump(db, f, indent=4)
+    df = pandas.DataFrame.from_dict(db)
+    df['model'] = df['model'].astype('category').cat.codes
+    df['color'] = df['color'].astype('category').cat.codes
+    df['label'] = df['vzw'].astype('category').cat.codes
+    df.drop('vzw', axis=1).to_csv('test.csv', index=False)
+
+
 # parse_avia_log('data270_xml/iPhone6s Gray')
 # db = prepare_data('iPhone6s Gray')
-
+prepare_data_score('data270_json')
