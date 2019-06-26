@@ -71,109 +71,116 @@ def knn_training(feature_list):
     print("best k is %s, best accurate is %s" % (best_k, best_arr))
 
 
-FEATURE_NAME = [
-    "PhoneDefectCount",
-    # surface AA
-    "AADefectCount",
-    # scratch on surface AA
-    "AAScratchCount",
-    "AASMaxLength", "AASMinLength", "AASMeanLength",
-    "AASMaxWidth", "AASMinWidth", "AASMeanWidth",
-    "AASMaxArea", "AASMinArea", "AASMeanArea",
-    "AASMaxContrast", "AASMinContrast", "AASMeanContrast",
-    # nick on surface AA
-    "AANickCount",
-    "AANMaxLength", "AANMinLength", "AANMeanLength",
-    "AANMaxWidth", "AANMinWidth", "AANMeanWidth",
-    "AANMaxArea", "AANMinArea", "AANMeanArea",
-    "AANMaxContrast", "AANMinContrast", "AANMeanContrast",
-    # crack on surface AA
-    "AACrackCount",
-    "AACMaxLength", "AACMinLength", "AACMeanLength",
-    "AACMaxWidth", "AACMinWidth", "AACMeanWidth",
-    "AACMaxArea", "AACMinArea", "AACMeanArea",
-    "AACMaxContrast", "AACMinContrast", "AACMeanContrast",
-    # pindotgroup on surface AA
-    "AAPinDotGroupCount",
-    "AAPMaxLength", "AAPMinLength", "AAPMeanLength",
-    "AAPMaxWidth", "AAPMinWidth", "AAPMeanWidth",
-    "AAPMaxArea", "AAPMinArea", "AAPMeanArea",
-    "AAPMaxContrast", "AAPMinContrast", "AAPMeanContrast",
-    # distance variance
-    "AADistanceVar",
-    # additional feature1
-    "AAAddFeat1",
+def test():
+    FEATURE_NAME = [
+        "PhoneDefectCount",
+        # surface AA
+        "AADefectCount",
+        # scratch on surface AA
+        "AAScratchCount",
+        "AASMaxLength", "AASMinLength", "AASMeanLength",
+        "AASMaxWidth", "AASMinWidth", "AASMeanWidth",
+        "AASMaxArea", "AASMinArea", "AASMeanArea",
+        "AASMaxContrast", "AASMinContrast", "AASMeanContrast",
+        # nick on surface AA
+        "AANickCount",
+        "AANMaxLength", "AANMinLength", "AANMeanLength",
+        "AANMaxWidth", "AANMinWidth", "AANMeanWidth",
+        "AANMaxArea", "AANMinArea", "AANMeanArea",
+        "AANMaxContrast", "AANMinContrast", "AANMeanContrast",
+        # crack on surface AA
+        "AACrackCount",
+        "AACMaxLength", "AACMinLength", "AACMeanLength",
+        "AACMaxWidth", "AACMinWidth", "AACMeanWidth",
+        "AACMaxArea", "AACMinArea", "AACMeanArea",
+        "AACMaxContrast", "AACMinContrast", "AACMeanContrast",
+        # pindotgroup on surface AA
+        "AAPinDotGroupCount",
+        "AAPMaxLength", "AAPMinLength", "AAPMeanLength",
+        "AAPMaxWidth", "AAPMinWidth", "AAPMeanWidth",
+        "AAPMaxArea", "AAPMinArea", "AAPMeanArea",
+        "AAPMaxContrast", "AAPMinContrast", "AAPMeanContrast",
+        # distance variance
+        "AADistanceVar",
+        # additional feature1
+        "AAAddFeat1",
 
-    # surface A
-    "ADefectCount",
-    # scratch on surface A
-    "AScratchCount",
-    "ASMaxLength", "ASMinLength", "ASMeanLength",
-    "ASMaxWidth", "ASMinWidth", "ASMeanWidth",
-    "ASMaxArea", "ASMinArea", "ASMeanArea",
-    "ASMaxContrast", "ASMinContrast", "ASMeanContrast",
-    # nick on surface A
-    "ANickCount",
-    "ANMaxLength", "ANMinLength", "ANMeanLength",
-    "ANMaxWidth", "ANMinWidth", "ANMeanWidth",
-    "ANMaxArea", "ANMinArea", "ANMeanArea",
-    "ANMaxContrast", "ANMinContrast", "ANMeanContrast",
-    # crack on surface A
-    "ACrackCount",
-    "ACMaxLength", "ACMinLength", "ACMeanLength",
-    "ACMaxWidth", "ACMinWidth", "ACMeanWidth",
-    "ACMaxArea", "ACMinArea", "ACMeanArea",
-    "ACMaxContrast", "ACMinContrast", "ACMeanContrast",
-    # pindotgroup on surface A
-    "APinDotGroupCount",
-    "APMaxLength", "APMinLength", "APMeanLength",
-    "APMaxWidth", "APMinWidth", "APMeanWidth",
-    "APMaxArea", "APMinArea", "APMeanArea",
-    "APMaxContrast", "APMinContrast", "APMeanContrast",
-    # distance variance
-    "ADistanceVar",
-    # additional feature1
-    "AAddFeat1",
+        # surface A
+        "ADefectCount",
+        # scratch on surface A
+        "AScratchCount",
+        "ASMaxLength", "ASMinLength", "ASMeanLength",
+        "ASMaxWidth", "ASMinWidth", "ASMeanWidth",
+        "ASMaxArea", "ASMinArea", "ASMeanArea",
+        "ASMaxContrast", "ASMinContrast", "ASMeanContrast",
+        # nick on surface A
+        "ANickCount",
+        "ANMaxLength", "ANMinLength", "ANMeanLength",
+        "ANMaxWidth", "ANMinWidth", "ANMeanWidth",
+        "ANMaxArea", "ANMinArea", "ANMeanArea",
+        "ANMaxContrast", "ANMinContrast", "ANMeanContrast",
+        # crack on surface A
+        "ACrackCount",
+        "ACMaxLength", "ACMinLength", "ACMeanLength",
+        "ACMaxWidth", "ACMinWidth", "ACMeanWidth",
+        "ACMaxArea", "ACMinArea", "ACMeanArea",
+        "ACMaxContrast", "ACMinContrast", "ACMeanContrast",
+        # pindotgroup on surface A
+        "APinDotGroupCount",
+        "APMaxLength", "APMinLength", "APMeanLength",
+        "APMaxWidth", "APMinWidth", "APMeanWidth",
+        "APMaxArea", "APMinArea", "APMeanArea",
+        "APMaxContrast", "APMinContrast", "APMeanContrast",
+        # distance variance
+        "ADistanceVar",
+        # additional feature1
+        "AAddFeat1",
 
-    # surface B
-    "BDefectCount",
-    # scratch on surface B
-    "BScratchCount",
-    "BSMaxLength", "BSMinLength", "BSMeanLength",
-    "BSMaxWidth", "BSMinWidth", "BSMeanWidth",
-    "BSMaxArea", "BSMinArea", "BSMeanArea",
-    "BSMaxContrast", "BSMinContrast", "BSMeanContrast",
-    # nick on surface B
-    "BNickCount",
-    "BNMaxLength", "BNMinLength", "BNMeanLength",
-    "BNMaxWidth", "BNMinWidth", "BNMeanWidth",
-    "BNMaxArea", "BNMinArea", "BNMeanArea",
-    "BNMaxContrast", "BNMinContrast", "BNMeanContrast",
-    # crack on surface B
-    "BCrackCount",
-    "BCMaxLength", "BCMinLength", "BCMeanLength",
-    "BCMaxWidth", "BCMinWidth", "BCMeanWidth",
-    "BCMaxArea", "BCMinArea", "BCMeanArea",
-    "BCMaxContrast", "BCMinContrast", "BCMeanContrast",
-    # pindotgroup on surface B
-    "BPinDotGroupCount",
-    "BPMaxLength", "BPMinLength", "BPMeanLength",
-    "BPMaxWidth", "BPMinWidth", "BPMeanWidth",
-    "BPMaxArea", "BPMinArea", "BPMeanArea",
-    "BPMaxContrast", "BPMinContrast", "BPMeanContrast",
-    # distance variance
-    "BDistanceVar",
-    # additional feature1
-    "BAddFeat1",
+        # surface B
+        "BDefectCount",
+        # scratch on surface B
+        "BScratchCount",
+        "BSMaxLength", "BSMinLength", "BSMeanLength",
+        "BSMaxWidth", "BSMinWidth", "BSMeanWidth",
+        "BSMaxArea", "BSMinArea", "BSMeanArea",
+        "BSMaxContrast", "BSMinContrast", "BSMeanContrast",
+        # nick on surface B
+        "BNickCount",
+        "BNMaxLength", "BNMinLength", "BNMeanLength",
+        "BNMaxWidth", "BNMinWidth", "BNMeanWidth",
+        "BNMaxArea", "BNMinArea", "BNMeanArea",
+        "BNMaxContrast", "BNMinContrast", "BNMeanContrast",
+        # crack on surface B
+        "BCrackCount",
+        "BCMaxLength", "BCMinLength", "BCMeanLength",
+        "BCMaxWidth", "BCMinWidth", "BCMeanWidth",
+        "BCMaxArea", "BCMinArea", "BCMeanArea",
+        "BCMaxContrast", "BCMinContrast", "BCMeanContrast",
+        # pindotgroup on surface B
+        "BPinDotGroupCount",
+        "BPMaxLength", "BPMinLength", "BPMeanLength",
+        "BPMaxWidth", "BPMinWidth", "BPMeanWidth",
+        "BPMaxArea", "BPMinArea", "BPMeanArea",
+        "BPMaxContrast", "BPMinContrast", "BPMeanContrast",
+        # distance variance
+        "BDistanceVar",
+        # additional feature1
+        "BAddFeat1",
 
-    # measurement discoloration
-    "Rear_Cam", "Logo", "Switch", "Mic",
-    "grade",
-]
-db = np.loadtxt(open('train_data.csv'), delimiter=',', skiprows=1)
-samples_df = pd.DataFrame(db, columns=FEATURE_NAME)
-for i in range(11, 31, 3):
-    print('k is {}'.format(i))
-    knn_training_validation_loo_1(samples_df, i)
-# print("best accurate is %s" % (accurate))
-# knn_training(samples_df.values)
+        # measurement discoloration
+        "Rear_Cam", "Logo", "Switch", "Mic",
+        "grade",
+    ]
+    db = np.loadtxt(open('train_data.csv'), delimiter=',', skiprows=1)
+    samples_df = pd.DataFrame(db, columns=FEATURE_NAME)
+    for i in range(11, 31, 3):
+        print('k is {}'.format(i))
+        knn_training_validation_loo_1(samples_df, i)
+    # print("best accurate is %s" % (accurate))
+    # knn_training(samples_df.values)
+
+
+def grade(filename):
+    pass
+
+

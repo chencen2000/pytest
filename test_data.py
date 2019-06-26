@@ -70,6 +70,74 @@ def parse_270_log():
                     json.dump(dict, f, indent=4)
 
 
+def parse_classify_log_count(text):
+    ret = {}
+    if text:
+        for s in text.split('\n'):
+            if s:
+                pos = s.index('=')
+                if 0 < pos < len(s):
+                    k = s[0:pos].strip()
+                    v = int(s[pos+1:])
+                    ret[k] = v
+    return ret
+
+
+def parse_classify_log_surface(surface, text):
+    ret = {}
+    if surface and text:
+        for s in text.split('\n'):
+            if s:
+                s = s.strip()
+                pos = s.index('=')
+                if s.startswith('Totoal number on') and pos > 0:
+                    ret['All-{}-ALL'.format(surface)] = int(s[pos+1:])
+                elif s.startswith('Totoal number of major on') and pos > 0:
+                    ret['All-{}-Major'.format(surface)] = int(s[pos+1:])
+                elif s.startswith('Zone') and pos > 0:
+                    ret['All-{}-{}'.format(surface, s[0:pos].strip())] = int(s[pos + 1:])
+    return ret
+
+
+def parse_classify_log(filename):
+    ret = {}
+    with open(filename) as f:
+        text = f.read()
+    r = re.compile(r'Flaws:(.*)Count:(.*)AA Surface:(.*)A Surface:(.*)B Surface:(.*)C Surface:(.*)Grade = (.*)',
+                   flags=re.S)
+    m = r.match(text)
+    if m:
+        ret.update(parse_classify_log_count(m.group(2)))
+        ret.update(parse_classify_log_surface('AA', m.group(3)))
+        ret.update(parse_classify_log_surface('A', m.group(4)))
+        ret.update(parse_classify_log_surface('B', m.group(5)))
+        ret.update(parse_classify_log_surface('C', m.group(6)))
+    return ret
+
+
+def parse_270_log_v2(root='data270_xml', output='output'):
+    # root = '117_Testing Set'
+    # output = 'output'
+    rg = re.compile(r'^defect_(\d*).xml$')
+    vdb = None
+    with open('verizon_data.json') as f:
+        vdb = json.load(f)
+    for r, d, f in os.walk(root):
+        for fn in f:
+            m = rg.match(fn)
+            if m:
+                log_fn = 'classify_{}.txt'.format(m.group(1))
+                print("parse: {} and {}".format(fn, log_fn))
+                defects = parse_defect_xml(os.path.join(r, fn))
+                vd = find_by_imei_last(m.group(1), vdb)
+                dict = {}
+                dict.update(vd)
+                dict['defects'] = defects
+                if os.path.exists(os.path.join(r, log_fn)):
+                    dict['counts'] = parse_classify_log(os.path.join(r, log_fn))
+                with open(os.path.join(output, '{}.json'.format(vd['imei'])), 'w') as f:
+                    json.dump(dict, f, indent=4)
+
 '''
 defects = parse_defect_xml(r'C:\Tools\avia\test.xml')
 s = json.dumps(defects)
@@ -340,6 +408,94 @@ def load_270_json(folder):
     return ret
 
 
+def rule_base_test(src, target='test.csv'):
+    folder = 'output'
+    # grades = ['A+', 'A', 'B', 'C', 'D+']
+    for fn in os.listdir(folder):
+        os.remove(os.path.join(folder, fn))
+    parse_270_log_v2(src, folder)
+    data = []
+    for fn in os.listdir(folder):
+        db = None
+        with open(os.path.join(folder, fn)) as f:
+            db = json.load(f)
+        if db:
+            r = {
+                'All-A-ALL': 0,
+                'All-A-Major': 0,
+                'All-AA-ALL': 0,
+                'All-AA-Major': 0,
+                'All-AA-Zone1': 0,
+                'All-AA-Zone2': 0,
+                'All-AA-Zone3': 0,
+                'All-AA-Zone4': 0,
+                'All-AA-Zone5': 0,
+                'All-B-ALL': 0,
+                'All-B-Major': 0,
+                'All-C-ALL': 0,
+                'All-C-Major': 0,
+                'Discoloration-B-Area1': 0,
+                'Discoloration-B-Logo': 0,
+                'Discoloration-B-Mic': 0,
+                'Discoloration-B-Rear_Cam': 0,
+                'Discoloration-B-Switch': 0,
+                'Nick-A-Minor': 0,
+                'Nick-A-Other1': 0,
+                'Nick-A-Other2': 0,
+                'Nick-A-S': 0,
+                'Nick-AA-Minor': 0,
+                'Nick-AA-Other1': 0,
+                'Nick-AA-Other2': 0,
+                'Nick-B-Major': 0,
+                'Nick-B-MajorC': 0,
+                'Nick-B-Minor': 0,
+                'Nick-B-MinorC': 0,
+                'Nick-B-Other1': 0,
+                'Nick-B-Other2': 0,
+                'Nick-B-OtherC': 0,
+                'Nick-B-S': 0,
+                'PinDotGroup-A-10x10': 0,
+                'PinDotGroup-B-10x10': 0,
+                'PinDotGroup-B-10x40': 0,
+                'PinDotGroup-B-Other': 0,
+                'Scratch-A-Minor': 0,
+                'Scratch-A-Other1': 0,
+                'Scratch-A-Other2': 0,
+                'Scratch-A-Other3': 0,
+                'Scratch-A-S1': 0,
+                'Scratch-A-S2': 0,
+                'Scratch-AA-Major': 0,
+                'Scratch-AA-Minor': 0,
+                'Scratch-AA-Other1': 0,
+                'Scratch-AA-Other2': 0,
+                'Scratch-AA-S': 0,
+                'Scratch-B-Major': 0,
+                'Scratch-B-Minor': 0,
+                'Scratch-B-Other1': 0,
+                'Scratch-B-Other2': 0,
+                'Scratch-B-Other3': 0,
+                'Scratch-B-S1': 0,
+                'Scratch-B-S2': 0,
+                'vzw': 0
+            }
+            # r['vzw'] = grades.index(db['vzw'])
+            r['vzw'] = db['vzw']
+            r['model'] = db['model']
+            r['color'] = db['color']
+            for i in db['counts']:
+                if i in r:
+                    r[i] = db['counts'][i]
+            data.append(r)
+    with open('test.json', 'w') as f:
+        json.dump(data, f, indent=4)
+    df = pandas.DataFrame.from_dict(data)
+    x = df.drop(['color','model','vzw'], axis=1)
+    # x['color'] = df['color'].astype('category').cat.codes
+    # x['model'] = df['model'].astype('category').cat.codes
+    x['vzw'] = df['vzw'].astype('category').cat.codes
+    x.to_csv(target, index=False)
+
+
 # check_score()
 # d = parse_defect_xml('data270_xml\\123\\defect_123.xml')
 # with open('test\\test.json', 'w') as f:
@@ -351,3 +507,7 @@ def load_270_json(folder):
 # prepare_data()
 # convert_data_to_csv('ready.json')
 # put_together()
+# parse_classify_log('data270_xml/iPhone6 Gold/123/classify_123.txt')
+# rule_base_test('117_Testing Set')
+rule_base_test('117_Testing Set')
+# rule_base_test('data270_xml', 'ready.csv')
