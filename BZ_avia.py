@@ -4,13 +4,13 @@ import json
 def defect_xml_to_json(filename = 'BZ_defect.xml'):
     xml = ET.parse(filename)
     data = {}
+    defects = []
     for c in list(xml.getroot()):
         if c.tag != 'station':
             data[c.tag] = c.text
         else:
             pass
     # for each defect
-    defects = []
     for sta in xml.getroot().findall('station'):
         for alg in list(sta):
             for suf in list(alg):
@@ -34,8 +34,11 @@ def defect_xml_to_json(filename = 'BZ_defect.xml'):
                             loc += 1
                 defects.append(defect_data)
     data['defects'] = defects
-    return json.dumps(data)
+    return json.dumps(data, indent=4)
 
 
 json_str = defect_xml_to_json()
 print(json_str)
+# save to file
+with open('test.json', 'w') as f:
+    f.write(json_str)
