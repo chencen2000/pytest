@@ -1,0 +1,7 @@
+make exe
+pyinstaller --onefile .\UnifiedLogReader.py --version-file file_version_info.txt
+
+https://pypi.org/project/pyinstaller-versionfile/
+pip install pyinstaller-versionfile
+create file_version_info file
+create-version-file .\version.yaml --outfile file_version_info.txt
