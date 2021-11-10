@@ -1222,8 +1222,9 @@ class TraceV3(data_format.BinaryDataFormat):
             else:
                 logger.info("Unexpected tag value 0x{:X} @ 0x{:X} (Expected 0x6001, 0x6002 or 0x6003)".format(tag, log_file_pos))
                 pos += data_size
-                pad_len = (pos - start_skew) % 8
-                if pad_len:
+                _, remainder = divmod(pos, 8)
+                if remainder > 0:
+                    pad_len = 8 - remainder
                     pos += pad_len
             #padding,moved to individual sections due to anomaly with few files, where privatedata in 0x6001 has no padding after!
 
@@ -1277,6 +1278,7 @@ class TraceV3(data_format.BinaryDataFormat):
             debug_log_count = 0
             uncompressed_file_pos = pos
             logs = []
+            skip_process = False
             while pos < file_size:
                 f.seek(pos)
                 chunk_header = f.read(16)
@@ -1287,11 +1289,20 @@ class TraceV3(data_format.BinaryDataFormat):
                     meta_chunk_index = 0
                     catalog = self.ProcessMetaChunk(buffer)
                     uncompressed_file_pos += 16 + data_length
+                    for proc in catalog.ProcInfos:
+                        # logger.info(f'pid={proc.pid}')
+                        # logger.info(proc.items)
+                        if proc.pid==41:
+                            skip_process = False
+                            break
+                    else:
+                        skip_process = True
                 elif tag == 0x600D:
-                    uncompressed_buffer = self._DecompressChunkData(buffer, len(buffer))
-                    self.ProcessDataChunk(uncompressed_buffer, catalog, meta_chunk_index, uncompressed_file_pos + 16, logs)
+                    if not skip_process:
+                        uncompressed_buffer = self._DecompressChunkData(buffer, len(buffer))
+                        self.ProcessDataChunk(uncompressed_buffer, catalog, meta_chunk_index, uncompressed_file_pos + 16, logs)
+                        uncompressed_file_pos += 16 + len(uncompressed_buffer)
                     meta_chunk_index += 1
-                    uncompressed_file_pos += 16 + len(uncompressed_buffer)
                 else:
                     logger.info("Unknown header for chunk - 0x{:X} , skipping chunk @ 0x{:X}!".format(tag, pos))
                     uncompressed_file_pos += 16 + data_length

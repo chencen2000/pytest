@@ -290,11 +290,11 @@ class FileOutputWriter(object):
                     if len(log[13]) or len(log[14]):
                         msg += '[' + log[13] + ':' + log[14] + '] '
                     msg += log[22]
-
-                    self._file_object.write((
-                        '{time:26} {li[4]:<#10x} {li[5]:11} {li[6]:<#20x} '
-                        '{li[8]:<6} {li[10]:<4} {message}').format(
-                            li=log, time=log[3], message=msg))
+                    if log[8]==41:
+                        self._file_object.write((
+                            '{time} {li[4]:<#10x} {li[5]:11} {li[6]:<#20x} '
+                            '{li[8]:<6} {li[10]:<4} {message}\n').format(
+                                li=log, time=log[3], message=msg))
 
             except (IOError, OSError):
                 logger.exception('Error writing to output file')
@@ -431,13 +431,13 @@ def Main():
     arg_parser.add_argument('tracev3_path', help='Path to either tracev3 file or folder to recurse (/var/db/diagnostics)')
     arg_parser.add_argument('output_path', help='An existing folder where output will be saved')
 
-    arg_parser.add_argument(
-         '-f', '--output_format', action='store', choices=(
-             'SQLITE', 'TSV_ALL', 'LOG_DEFAULT'),
-         metavar='FORMAT', default='LOG_DEFAULT', help=(
-             'Output format: SQLITE, TSV_ALL, LOG_DEFAULT  (Default is LOG_DEFAULT)'), type=str.upper)
+    # arg_parser.add_argument(
+    #      '-f', '--output_format', action='store', choices=(
+    #          'SQLITE', 'TSV_ALL', 'LOG_DEFAULT'),
+    #      metavar='FORMAT', default='LOG_DEFAULT', help=(
+    #          'Output format: SQLITE, TSV_ALL, LOG_DEFAULT  (Default is LOG_DEFAULT)'), type=str.upper)
 
-    arg_parser.add_argument('-l', '--log_level', help='Log levels: INFO, DEBUG, WARNING, ERROR (Default is INFO)')
+    # arg_parser.add_argument('-l', '--log_level', help='Log levels: INFO, DEBUG, WARNING, ERROR (Default is INFO)')
 
     args = arg_parser.parse_args()
 

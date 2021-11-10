@@ -58,31 +58,58 @@ class Dsc(data_format.BinaryDataFormat):
 
         self._format_version = '{0:d}.{1:d}'.format(major_version, minor_version)
 
-        while len(self.range_entries) < num_range_entries:
-            range_entry_data = file_object.read(16)
+        if major_version == 1:
+            while len(self.range_entries) < num_range_entries:
+                range_entry_data = file_object.read(16)
 
-            uuid_index, v_off, data_offset, data_len = struct.unpack(
-                "<IIII", range_entry_data)
-            range_entry = [uuid_index, v_off, data_offset, data_len]
-            self.range_entries.append(range_entry)
+                uuid_index, v_off, data_offset, data_len = struct.unpack(
+                    "<IIII", range_entry_data)
+                range_entry = [uuid_index, v_off, data_offset, data_len]
+                self.range_entries.append(range_entry)
 
-        uuid_entry_offset = file_object.tell()
-        while len(self.uuid_entries) < num_uuid_entries:
-            file_object.seek(uuid_entry_offset, os.SEEK_SET)
-            uuid_entry_data = file_object.read(28)
-            uuid_entry_offset += 28
+            uuid_entry_offset = file_object.tell()
+            while len(self.uuid_entries) < num_uuid_entries:
+                file_object.seek(uuid_entry_offset, os.SEEK_SET)
+                uuid_entry_data = file_object.read(28)
+                uuid_entry_offset += 28
 
-            v_off, size = struct.unpack("<II", uuid_entry_data[:8])
-            uuid_object = UUID(bytes=uuid_entry_data[8:24])
-            data_offset = struct.unpack("<I", uuid_entry_data[24:])[0]
+                v_off, size = struct.unpack("<II", uuid_entry_data[:8])
+                uuid_object = UUID(bytes=uuid_entry_data[8:24])
+                data_offset = struct.unpack("<I", uuid_entry_data[24:])[0]
 
-            file_object.seek(data_offset, os.SEEK_SET)
-            path_data = file_object.read(1024) # File path should not be >1024
+                file_object.seek(data_offset, os.SEEK_SET)
+                path_data = file_object.read(1024) # File path should not be >1024
 
-            lib_path = self._ReadCString(path_data)
-            lib_name = posixpath.basename(lib_path)
-            self.uuid_entries.append([v_off, size, uuid_object, lib_path, lib_name])
+                lib_path = self._ReadCString(path_data)
+                lib_name = posixpath.basename(lib_path)
+                self.uuid_entries.append([v_off, size, uuid_object, lib_path, lib_name])
+        elif major_version ==2:
+            while len(self.range_entries) < num_range_entries:
+                range_entry_data = file_object.read(24)
+                v_off, data_off, data_len, idx = struct.unpack('<QIIQ', range_entry_data)
+                # uuid_index, v_off, data_offset, data_len = struct.unpack("<IIII", range_entry_data)
+                range_entry = [idx, v_off, data_off, data_len]
+                self.range_entries.append(range_entry)
+            
+            uuid_entry_offset = file_object.tell()
+            while len(self.uuid_entries) < num_uuid_entries:
+                file_object.seek(uuid_entry_offset, os.SEEK_SET)
+                uuid_entry_data = file_object.read(32)
+                uuid_entry_offset += 32
 
+                v_off, size = struct.unpack("<QI", uuid_entry_data[:12])
+                uuid_object = UUID(bytes=uuid_entry_data[12:28])
+                data_offset = struct.unpack("<I", uuid_entry_data[28:])[0]
+
+                file_object.seek(data_offset, os.SEEK_SET)
+                path_data = file_object.read(1024) # File path should not be >1024
+
+                lib_path = self._ReadCString(path_data)
+                lib_name = posixpath.basename(lib_path)
+                self.uuid_entries.append([v_off, size, uuid_object, lib_path, lib_name])
+
+        else:
+            logger.info(f'Version: {major_version}.{minor_version} not support.')
         return True
 
     def FindVirtualOffsetEntries(self, v_offset):
