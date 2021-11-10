@@ -787,6 +787,8 @@ class TraceV3(data_format.BinaryDataFormat):
                         logger.warning('Avoided padding for log ending @ 0x{:X}'.format(debug_file_pos + pos))
             pid = proc_info.pid
             euid = proc_info.euid
+            if pid != 41:
+                tag = 0x6004
             if tag == 0x6001: #Firehose
                 offset_strings, strings_v_offset, unknown4, unknown5, continuousTime \
                   = struct.unpack('<HHHHQ', buffer[pos + pos2 : pos + pos2 + 16])

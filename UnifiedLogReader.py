@@ -290,11 +290,10 @@ class FileOutputWriter(object):
                     if len(log[13]) or len(log[14]):
                         msg += '[' + log[13] + ':' + log[14] + '] '
                     msg += log[22]
-                    if log[8]==41:
-                        self._file_object.write((
-                            '{time} {li[4]:<#10x} {li[5]:11} {li[6]:<#20x} '
-                            '{li[8]:<6} {li[10]:<4} {message}\n').format(
-                                li=log, time=log[3], message=msg))
+                    self._file_object.write((
+                        '{time} {li[4]:<#10x} {li[5]:11} {li[6]:<#20x} '
+                        '{li[8]:<6} {li[10]:<4} {message}\n').format(
+                            li=log, time=log[3], message=msg))
 
             except (IOError, OSError):
                 logger.exception('Error writing to output file')
@@ -411,7 +410,7 @@ def DecompressTraceV3Log(input_path, output_path):
         logger.exception('')
 
 
-def Main():
+def Main_1():
     '''The main program function.
 
     Returns:
@@ -431,13 +430,13 @@ def Main():
     arg_parser.add_argument('tracev3_path', help='Path to either tracev3 file or folder to recurse (/var/db/diagnostics)')
     arg_parser.add_argument('output_path', help='An existing folder where output will be saved')
 
-    # arg_parser.add_argument(
-    #      '-f', '--output_format', action='store', choices=(
-    #          'SQLITE', 'TSV_ALL', 'LOG_DEFAULT'),
-    #      metavar='FORMAT', default='LOG_DEFAULT', help=(
-    #          'Output format: SQLITE, TSV_ALL, LOG_DEFAULT  (Default is LOG_DEFAULT)'), type=str.upper)
+    arg_parser.add_argument(
+         '-f', '--output_format', action='store', choices=(
+             'SQLITE', 'TSV_ALL', 'LOG_DEFAULT'),
+         metavar='FORMAT', default='LOG_DEFAULT', help=(
+             'Output format: SQLITE, TSV_ALL, LOG_DEFAULT  (Default is LOG_DEFAULT)'), type=str.upper)
 
-    # arg_parser.add_argument('-l', '--log_level', help='Log levels: INFO, DEBUG, WARNING, ERROR (Default is INFO)')
+    arg_parser.add_argument('-l', '--log_level', help='Log levels: INFO, DEBUG, WARNING, ERROR (Default is INFO)')
 
     args = arg_parser.parse_args()
 
@@ -514,6 +513,75 @@ def Main():
     logger.info('Started processing')
 
     unified_log_reader.ReadDscFiles(uuidtext_folder_path)
+    unified_log_reader.ReadTraceV3Files(tracev3_path, output_writer)
+
+    output_writer.Close()
+
+    time_processing_ended = time.time()
+    run_time = time_processing_ended - time_processing_started
+    logger.info("Finished in time = {}".format(time.strftime('%H:%M:%S', time.gmtime(run_time))))
+    logger.info("{} Logs processed".format(unified_log_reader.total_logs_processed))
+    logger.info("Review the Log file and report any ERRORs or EXCEPTIONS to the developers")
+
+    return True
+
+
+def Main():
+    description = (
+        'UnifiedLogReader is a tool to read macOS Unified Logging tracev3 files.\n'
+        'This is version {0:s} tested on macOS 10.12.5 - 10.15 and iOS 12.\n\n'
+        'Notes:\n-----\n'
+        'If you have a .logarchive, then point uuidtext_path to the .logarchive folder, \n'
+        'the timesync folder is within the logarchive folder').format(UnifiedLog.__version__)
+
+    arg_parser = argparse.ArgumentParser(
+        description=description, formatter_class=argparse.RawTextHelpFormatter)
+    arg_parser.add_argument('logarchive_path', help='Path to logarchive folder')
+    arg_parser.add_argument('-o', '--output', help='An existing folder where output will be saved', )
+    args = arg_parser.parse_args()
+    # print(vars(args))
+    logarchive_path = args.logarchive_path
+    output_path = args.output
+    if not os.path.exists(logarchive_path):
+        print('Exiting..LogArchive Path not found {}'.format(logarchive_path))
+    timesync_folder_path = os.path.join(logarchive_path, "timesync")
+    if not os.path.exists(timesync_folder_path):
+        print('Exiting..Timesync Path not found {}'.format(timesync_folder_path))
+    tracev3_path = os.path.join(logarchive_path, "Persist")
+    if not os.path.exists(timesync_folder_path):
+        tracev3_path = logarchive_path
+    if not os.path.exists(output_path):
+        # print ('Creating output folder {}'.format(output_path))
+        os.makedirs(output_path)
+    log_file_path = os.path.join(output_path, "Log." + time.strftime("%Y%m%d-%H%M%S") + ".txt")
+
+    # log_level = logging.INFO
+    # log_console_handler = logging.StreamHandler()
+    # log_console_handler.setLevel(log_level)
+    # log_console_format  = logging.Formatter('%(levelname)s - %(message)s')
+    # log_console_handler.setFormatter(log_console_format)
+    # logger.addHandler(log_console_handler)
+
+    #log file
+    log_file_handler = logging.FileHandler(log_file_path)
+    log_file_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+    logger.addHandler(log_file_handler)
+    logger.setLevel(logging.INFO)    
+    
+    unified_log_reader = UnifiedLogReader()
+    if not unified_log_reader.ReadTimesyncFolder(timesync_folder_path):
+        logger.error('Failed to get any timesync entries')
+        return False
+
+    file_path = os.path.join(output_path, 'logs.txt')
+    output_writer = FileOutputWriter(file_path)
+    if not output_writer.Open():
+        return False
+
+    time_processing_started = time.time()
+    logger.info('Started processing')
+
+    unified_log_reader.ReadDscFiles(logarchive_path)
     unified_log_reader.ReadTraceV3Files(tracev3_path, output_writer)
 
     output_writer.Close()
