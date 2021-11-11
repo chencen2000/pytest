@@ -335,11 +335,26 @@ class UnifiedLogReader(object):
         file_object = virtual_file.VirtualFile(tracev3_path, 'traceV3')
         trace_file = tracev3_file.TraceV3(
             self._vfs, file_object, self._ts_list, self._uuidtext_folder_path,
-            self._caches)
+            None, self._caches)
 
         # TODO: remove log_list_process_func callback from TraceV3.Parse() 
         self._output_writer = output_writer
         trace_file.Parse(log_list_process_func=self._ProcessLogsList)
+        # save the uuid file into self._caches
+        if trace_file._catalog is not None:
+            for f in trace_file._catalog.FileObjects:
+                s = f._file.file_type if f._file is not None else ''                
+                if s == 'Uuidtext':
+                    key = f.Uuid.hex.upper()
+                    if key not in self._caches.cached_uuidtext:
+                        self._caches.cached_uuidtext[key] = f
+                    pass
+                elif s == 'Dsc':                    
+                    key = f._file.filename
+                    if key not in self._caches.cached_dsc:
+                        self._caches.cached_dsc[key] = f
+                else:
+                    pass
 
     def _ReadTraceV3Folder(self, tracev3_path, output_writer):
         '''Reads all the tracev3 files in the folder.

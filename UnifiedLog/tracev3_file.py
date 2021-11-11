@@ -64,6 +64,7 @@ class TraceV3(data_format.BinaryDataFormat):
         self.large_data = {} # key = ( data_ref_id << 64 | contTime ) , value = data 
         self.boot_uuid_ts_list = None
         self.chunk_read_count = 0
+        self._catalog = None
 
     def _DecompressChunkData(self, chunk_data, data_len):
         '''Decompress an individual compressed chunk (tag=0x600D)'''
@@ -1291,14 +1292,18 @@ class TraceV3(data_format.BinaryDataFormat):
                     meta_chunk_index = 0
                     catalog = self.ProcessMetaChunk(buffer)
                     uncompressed_file_pos += 16 + data_length
+                    skip_process = True
                     for proc in catalog.ProcInfos:
                         # logger.info(f'pid={proc.pid}')
                         # logger.info(proc.items)
-                        if proc.pid==41:
-                            skip_process = False
-                            break
-                    else:
-                        skip_process = True
+                        ut_cache = catalog.FileObjects[proc.uuid_file_index]
+                        p_name = ut_cache.library_name
+                        if p_name.lower() == 'powerd'.lower():
+                            for k in proc.items:
+                                x, y = proc.items[k]
+                                if x=='powerd' and y=='batteryhealth':
+                                    skip_process = False
+                                    break                        
                 elif tag == 0x600D:
                     if not skip_process:
                         uncompressed_buffer = self._DecompressChunkData(buffer, len(buffer))
@@ -1316,6 +1321,7 @@ class TraceV3(data_format.BinaryDataFormat):
                 if log_list_process_func and (len(logs) > 100000):
                     log_list_process_func(logs, self)
                     logs = []
+            self._catalog = catalog
             # outside loop, end of file reached, write remaining logs
             if log_list_process_func and (len(logs) > 0):
                 log_list_process_func(logs, self)
