@@ -41,6 +41,7 @@ import codecs
 import logging
 import io
 import os
+# from plistlib import dump
 import sqlite3
 import sys
 import time
@@ -314,13 +315,34 @@ class UnifiedLogReader(object):
 
     # TODO: remove log_list_process_func callback from TraceV3.Parse() 
     def _ProcessLogsList(self, logs, tracev3):
-        if isinstance(self._output_writer, SQLiteDatabaseOutputWriter):
-            self._output_writer.WriteLogEntries(logs)
-            self.total_logs_processed += len(logs)
-        else:
-            for log_entry in logs:
-                self._output_writer.WriteLogEntry(log_entry)
-                self.total_logs_processed += 1
+        if bool(self._output_writer):
+            if isinstance(self._output_writer, SQLiteDatabaseOutputWriter):
+                self._output_writer.WriteLogEntries(logs)
+                self.total_logs_processed += len(logs)
+            else:
+                for log_entry in logs:
+                    self._output_writer.WriteLogEntry(log_entry)
+                    self.total_logs_processed += 1
+        # dump logs to stdout
+        self.dumpLogToStdout(logs, tracev3)
+    
+    def dumpLogToStdout(self, logs, tracev3):
+        for log in logs:
+            t0 = UnifiedLogLib.ReadAPFSTime(log[3])
+            signpost = ''  # (log[15] + ':') if log[15] else ''
+            if log[15]:
+                signpost += '[' + log[16] + ']'
+            msg = (signpost + ' ') if signpost else ''
+            msg += log[11] + ' ' + (( '(' + log[12] + ') ') if log[12] else '')
+            if len(log[13]) or len(log[14]):
+                msg += '[' + log[13] + ':' + log[14] + '] '
+            msg += log[22]
+            # self._file_object.write((
+            #     '{time} {li[4]:<#10x} {li[5]:11} {li[6]:<#20x} '
+            #     '{li[8]:<6} {li[10]:<4} {message}\n').format(
+            #         li=log, time=log[3], message=msg))
+            print(f'{t0} {log[4]:<#10x} {log[5]:11} {log[6]:<#20x} {log[8]:<6} {log[10]:<4} {msg}')
+        pass
 
     def _ReadTraceV3File(self, tracev3_path, output_writer):
         '''Reads a tracev3 file.
@@ -340,6 +362,7 @@ class UnifiedLogReader(object):
         # TODO: remove log_list_process_func callback from TraceV3.Parse() 
         self._output_writer = output_writer
         trace_file.Parse(log_list_process_func=self._ProcessLogsList)
+        # trace_file.Parse(log_list_process_func=self.dumpLogToStdout)        
         # save the uuid file into self._caches
         if trace_file._catalog is not None:
             for f in trace_file._catalog.FileObjects:
@@ -552,11 +575,11 @@ def Main():
     arg_parser = argparse.ArgumentParser(
         description=description, formatter_class=argparse.RawTextHelpFormatter)
     arg_parser.add_argument('logarchive_path', help='Path to logarchive folder')
-    arg_parser.add_argument('-o', '--output', help='An existing folder where output will be saved', )
+    arg_parser.add_argument('--log', help='An existing folder where output will be saved', required=False )
     args = arg_parser.parse_args()
     # print(vars(args))
     logarchive_path = args.logarchive_path
-    output_path = args.output
+    output_path = args.log
     if not os.path.exists(logarchive_path):
         print('Exiting..LogArchive Path not found {}'.format(logarchive_path))
     timesync_folder_path = os.path.join(logarchive_path, "timesync")
@@ -565,10 +588,11 @@ def Main():
     tracev3_path = os.path.join(logarchive_path, "Persist")
     if not os.path.exists(timesync_folder_path):
         tracev3_path = logarchive_path
-    if not os.path.exists(output_path):
+    log_file_path = None
+    if bool(output_path) and os.path.exists(output_path):
         # print ('Creating output folder {}'.format(output_path))
-        os.makedirs(output_path)
-    log_file_path = os.path.join(output_path, "Log." + time.strftime("%Y%m%d-%H%M%S") + ".txt")
+        # os.makedirs(output_path)
+        log_file_path = os.path.join(output_path, "Log." + time.strftime("%Y%m%d-%H%M%S") + ".txt")
 
     # log_level = logging.INFO
     # log_console_handler = logging.StreamHandler()
@@ -578,20 +602,23 @@ def Main():
     # logger.addHandler(log_console_handler)
 
     #log file
-    log_file_handler = logging.FileHandler(log_file_path)
-    log_file_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
-    logger.addHandler(log_file_handler)
-    logger.setLevel(logging.INFO)    
+    if bool(log_file_path):
+        log_file_handler = logging.FileHandler(log_file_path)
+        log_file_handler.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+        logger.addHandler(log_file_handler)
+        logger.setLevel(logging.INFO)    
     
     unified_log_reader = UnifiedLogReader()
     if not unified_log_reader.ReadTimesyncFolder(timesync_folder_path):
         logger.error('Failed to get any timesync entries')
         return False
 
-    file_path = os.path.join(output_path, 'logs.txt')
-    output_writer = FileOutputWriter(file_path)
-    if not output_writer.Open():
-        return False
+    output_writer = None
+    if bool(output_path) and os.path.exists(output_path):
+        file_path = os.path.join(output_path, 'logs.txt')
+        output_writer = FileOutputWriter(file_path)
+        if not output_writer.Open():
+            return False
 
     time_processing_started = time.time()
     logger.info('Started processing')
@@ -599,7 +626,8 @@ def Main():
     unified_log_reader.ReadDscFiles(logarchive_path)
     unified_log_reader.ReadTraceV3Files(tracev3_path, output_writer)
 
-    output_writer.Close()
+    if bool(output_path):
+        output_writer.Close()
 
     time_processing_ended = time.time()
     run_time = time_processing_ended - time_processing_started
@@ -609,6 +637,12 @@ def Main():
 
     return True
 
+def Main_test():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--foo', required=False)
+    args = parser.parse_args()
+    print(vars(args))
+    pass
 
 if __name__ == "__main__":
     if not Main():
