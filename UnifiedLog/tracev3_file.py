@@ -1301,7 +1301,7 @@ class TraceV3(data_format.BinaryDataFormat):
                         if p_name.lower() == 'powerd'.lower():
                             for k in proc.items:
                                 x, y = proc.items[k]
-                                if x=='powerd' and y=='batteryhealth':
+                                if x=='powerd' and (y=='batteryhealth' or y=='battery'):
                                     skip_process = False
                                     break                        
                 elif tag == 0x600D:
