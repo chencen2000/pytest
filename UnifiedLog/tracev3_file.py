@@ -65,6 +65,7 @@ class TraceV3(data_format.BinaryDataFormat):
         self.boot_uuid_ts_list = None
         self.chunk_read_count = 0
         self._catalog = None
+        self._powerd_proc = None        
 
     def _DecompressChunkData(self, chunk_data, data_len):
         '''Decompress an individual compressed chunk (tag=0x600D)'''
@@ -788,8 +789,12 @@ class TraceV3(data_format.BinaryDataFormat):
                         logger.warning('Avoided padding for log ending @ 0x{:X}'.format(debug_file_pos + pos))
             pid = proc_info.pid
             euid = proc_info.euid
-            if pid != 41:
+            if bool(self._powerd_proc) and pid == self._powerd_proc.pid:
+                pass
+            else:
                 tag = 0x6004
+            # if pid != 41:
+            #     tag = 0x6004
             if tag == 0x6001: #Firehose
                 offset_strings, strings_v_offset, unknown4, unknown5, continuousTime \
                   = struct.unpack('<HHHHQ', buffer[pos + pos2 : pos + pos2 + 16])
@@ -1292,20 +1297,23 @@ class TraceV3(data_format.BinaryDataFormat):
                     meta_chunk_index = 0
                     catalog = self.ProcessMetaChunk(buffer)
                     uncompressed_file_pos += 16 + data_length
-                    skip_process = True
+                    # skip_process = True
+                    self._powerd_proc = None
                     for proc in catalog.ProcInfos:
                         # logger.info(f'pid={proc.pid}')
                         # logger.info(proc.items)
                         ut_cache = catalog.FileObjects[proc.uuid_file_index]
                         p_name = ut_cache.library_name
-                        if p_name.lower() == 'powerd'.lower():
+                        if p_name.lower() == 'powerd':
                             for k in proc.items:
                                 x, y = proc.items[k]
-                                if x=='powerd' and (y=='batteryhealth' or y=='battery'):
-                                    skip_process = False
+                                # if x=='powerd' and (y=='batteryhealth' or y=='battery'):
+                                if x.lower()=='powerd' and y.lower() in ['batteryhealth', 'battery']:
+                                    # skip_process = False
+                                    self._powerd_proc = proc
                                     break                        
                 elif tag == 0x600D:
-                    if not skip_process:
+                    if bool(self._powerd_proc):
                         uncompressed_buffer = self._DecompressChunkData(buffer, len(buffer))
                         self.ProcessDataChunk(uncompressed_buffer, catalog, meta_chunk_index, uncompressed_file_pos + 16, logs)
                         uncompressed_file_pos += 16 + len(uncompressed_buffer)
