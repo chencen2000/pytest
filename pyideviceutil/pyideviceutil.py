@@ -1,20 +1,16 @@
-from plistlib import FMT_XML
 import sys
 import click
+import runpy
 # from test_cli import cli as test_cli1
 from listdevice import cli as listdevice_cli
 from dotask import cli as dotask_cli
 
 def run_pymobiledevice3():
-    import runpy
     del sys.argv[1]
     runpy.run_module("pymobiledevice3", run_name='__main__')
 
 def test():
-    import plistlib
-    with open('iOSautoOpenWifi.mobileconfig', 'rb') as fp:
-        data = plistlib.load(fp)
-    print(data)
+    pass
 
 
 if __name__ == '__main__':

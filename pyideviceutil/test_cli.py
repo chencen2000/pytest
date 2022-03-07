@@ -5,11 +5,11 @@ def cli():
     pass
 
 @cli.command()
-@click.option('-u','--udid', type=str)
+@click.option('--udid', type=str)
 @click.argument('filename')
-def cmd1(filename):
+def config(filename, udid):
     """Command on cli1"""
-    click.echo(f"cmd1. {filename}")
+    click.echo(f"config. {filename} {udid}")
 
 if __name__ == '__main__':
     cli()
