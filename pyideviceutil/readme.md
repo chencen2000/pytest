@@ -14,3 +14,4 @@ pip3 install pyinstaller
 
 publish
 pyinstaller pyideviceutil.py
+pyinstaller -F pyideviceutil.py -n iDeviceUtil
