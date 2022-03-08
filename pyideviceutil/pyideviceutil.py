@@ -2,6 +2,7 @@ import sys
 import click
 import runpy
 # from test_cli import cli as test_cli1
+import pymobiledevice3
 from listdevice import cli as listdevice_cli
 from dotask import cli as dotask_cli
 
