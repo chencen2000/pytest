@@ -15,3 +15,4 @@ pip3 install pyinstaller
 publish
 pyinstaller pyideviceutil.py
 pyinstaller -F pyideviceutil.py -n iDeviceUtil
+pyinstaller --add-data "tools_x32.tar.gz:." --add-data "tools_x64.tar.gz:." iOS_installer.py 
