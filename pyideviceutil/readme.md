@@ -1,40 +1,51 @@
-dev env setup
-apt-get install python3-pip
-apt-get install python3-setuptools
-apt-get install python3-venv
-apt install git
-apt install snapd
-snap install code --classic
+# iOS_installer
 
-in venv
-pip3 install --upgrade pip 
-pip3 install setuptools-rust
-pip3 install pymobiledevice3
-pip3 install pyinstaller
+Mantis #0005706
+[0005706: App load EXE for Linux (iOS) - FutureDial (mantishub.io)](https://futuredial.mantishub.io/view.php?id=5706)
 
-publish
-pyinstaller pyideviceutil.py
-pyinstaller -F pyideviceutil.py -n iDeviceUtil
-x64
-pip install click
-pyinstaller pyideviceutil.py
-cp tools_x64.tar.gz tools.tar.gz
-pyinstaller --add-data "tools.tar.gz:." iOS_installer.py 
-x86
-pip install click
-pyinstaller pyideviceutil.py
-cp tools_x32.tar.gz tools.tar.gz
-pyinstaller --add-data "tools.tar.gz:." iOS_installer.py 
+## Development Setup
 
-usage:
+    apt-get install python3-pip
+    apt-get install python3-setuptools
+    apt-get install python3-venv
+    apt install git
+    apt install snapd
+    snap install code --classic
+
+## Clone the repo
+    git clone https://github.com/chencen2000/pytest.git
+
+## prepare venv
+
+    python3 -m venv venv
+    source ./venv/bin/active
+    pip install --upgrade pip 
+    pip install click
+    pip install pyinstaller
+    
+## publish
+
+### for 64-bit OS release
+
+    cp tools_x64.tar.gz tools.tar.gz
+    pyinstaller --add-data "tools.tar.gz:." -F iOS_installer.py 
+    
+### for 32-bit OS release
+
+    cp tools_x32.tar.gz tools.tar.gz
+    pyinstaller --add-data "tools.tar.gz:." iOS_installer.py
+
+## Usage
 iOS_installer config <path to config.json> --udid <udid>
-return:
+
+Exit code:
 0, success
 1, error
 2, device not found 
 3, device not trusted
 
-config.json
+### config.json
+
 {
     "wifi":[
         {
