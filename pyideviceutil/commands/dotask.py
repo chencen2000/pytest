@@ -74,7 +74,10 @@ def dotask(filename, udid):
         install_mobileconfig(udid, fn, root.name)
     if 'app' in data:
         for fn in data['app']:
-            install_app(udid, fn, root.name)
+            if os.path.exists(fn):
+                install_app(udid, fn, root.name)
+            else:
+                click.echo(f'{fn} not exits.')
         pass
     root.cleanup()
 
