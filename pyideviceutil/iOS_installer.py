@@ -15,7 +15,7 @@ def cli():
 @cli.command()
 def version():
     """Show version"""
-    click.echo(f'Version 22.3.9.1 ({8*struct.calcsize("P")}-bit)')
+    click.echo(f'Version 22.3.9.2 ({8*struct.calcsize("P")}-bit)')
 
 @cli.command()
 @click.argument('folder')

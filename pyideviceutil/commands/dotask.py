@@ -50,6 +50,7 @@ def install_mobileconfig(udid, fn, root):
         p = subprocess.Popen([tool, '--udid', udid, 'install', fn], env=my_env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = p.communicate()
         code = p.returncode
+        print(output[0].decode('utf-8'))
 
 def install_app(udid, fn, root):
     tool = os.path.join(root, 'bin', 'ideviceinstaller')
@@ -59,6 +60,7 @@ def install_app(udid, fn, root):
         p = subprocess.Popen([tool, '--udid', udid, '-i', fn], env=my_env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = p.communicate()
         code = p.returncode
+        print(output[0].decode('utf-8'))
 
 @click.command()
 @click.option('--udid', type=str)
